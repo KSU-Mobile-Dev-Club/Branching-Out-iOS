@@ -11,6 +11,8 @@
 		280E63BE1C8922EE006348C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 280E63BD1C8922EE006348C6 /* Assets.xcassets */; };
 		280E63C11C8922EE006348C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 280E63BF1C8922EE006348C6 /* LaunchScreen.storyboard */; };
 		7F06D87B1C9258AF00FA3E13 /* MDC.NearbyTrees.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F06D87A1C9258AF00FA3E13 /* MDC.NearbyTrees.storyboard */; };
+		7F06D8801C925A4A00FA3E13 /* MDCNearbyTreesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F06D87F1C925A4A00FA3E13 /* MDCNearbyTreesViewController.swift */; };
+		7F06D8821C92657200FA3E13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F06D8811C92657200FA3E13 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,9 @@
 		280E63C01C8922EE006348C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		280E63C21C8922EE006348C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F06D87A1C9258AF00FA3E13 /* MDC.NearbyTrees.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MDC.NearbyTrees.storyboard; sourceTree = "<group>"; };
+		7F06D87C1C9259F700FA3E13 /* BranchingOut-iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BranchingOut-iOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		7F06D87F1C925A4A00FA3E13 /* MDCNearbyTreesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDCNearbyTreesViewController.swift; sourceTree = "<group>"; };
+		7F06D8811C92657200FA3E13 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,11 +57,14 @@
 		280E63B51C8922EE006348C6 /* BranchingOut-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				7F06D8811C92657200FA3E13 /* AppDelegate.swift */,
+				7F06D87F1C925A4A00FA3E13 /* MDCNearbyTreesViewController.swift */,
 				7F06D87A1C9258AF00FA3E13 /* MDC.NearbyTrees.storyboard */,
 				280E63BA1C8922EE006348C6 /* Main.storyboard */,
 				280E63BD1C8922EE006348C6 /* Assets.xcassets */,
 				280E63BF1C8922EE006348C6 /* LaunchScreen.storyboard */,
 				280E63C21C8922EE006348C6 /* Info.plist */,
+				7F06D87C1C9259F700FA3E13 /* BranchingOut-iOS-Bridging-Header.h */,
 			);
 			path = "BranchingOut-iOS";
 			sourceTree = "<group>";
@@ -133,6 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F06D8821C92657200FA3E13 /* AppDelegate.swift in Sources */,
+				7F06D8801C925A4A00FA3E13 /* MDCNearbyTreesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,10 +253,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "BranchingOut-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "MDC.BranchingOut-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BranchingOut-iOS/BranchingOut-iOS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -254,10 +267,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "BranchingOut-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "MDC.BranchingOut-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BranchingOut-iOS/BranchingOut-iOS-Bridging-Header.h";
 			};
 			name = Release;
 		};
