@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="2fs-bh-QDj">
+            <objects>
+                <viewController id="AHR-Xo-8I3" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mpy-bU-2dG"/>
+                        <viewControllerLayoutGuide type="bottom" id="XiX-6V-aCr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yUI-aq-T1q">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="testImage" translatesAutoresizingMaskIntoConstraints="NO" id="A2q-L0-trE">
+                                <rect key="frame" x="59" y="28" width="482" height="333"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Powered by Kansas State Mobile Development Club" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="S4F-UI-tE8">
+                                <rect key="frame" x="59" y="369" width="482" height="211"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NG1-kW-264" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="444"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="testImage" width="144" height="144"/>
+    </resources>
+</document>
