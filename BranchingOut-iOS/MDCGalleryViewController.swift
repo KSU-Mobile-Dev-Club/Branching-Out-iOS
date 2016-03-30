@@ -11,14 +11,13 @@ import UIKit
 private let reuseIdentifier = "GalleryCell"
 var imageArray = []
 
-class MDCVGalleryiewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class MDCGalleryViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     @IBOutlet var myCollectionView: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        self.clearsSelectionOnViewWillAppear = false
+
         
         // Register cell classes
         setupCollectionView()
@@ -52,9 +51,8 @@ class MDCVGalleryiewController: UIViewController, UICollectionViewDataSource, UI
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        //        var retval: CGSize = self.view.frame.size
-        //        retval.height = collectionView.frame.size.height
-        var retval = CGSize(width: 200.0, height: 200.0)
+        var retval: CGSize = self.view.frame.size
+        retval.width = myCollectionView.frame.size.height
         return retval
     }
     
@@ -71,21 +69,15 @@ class MDCVGalleryiewController: UIViewController, UICollectionViewDataSource, UI
     
     // MARK: Shenanigans
     func setupCollectionView() {
-        self.collectionView!.registerClass(MDCGalleryCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        let flowLayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        flowLayout.scrollDirection = .Vertical
-        flowLayout.estimatedItemSize = CGSize(width: 200.0, height: 200.0)
-        flowLayout.minimumInteritemSpacing = 10.0
-        flowLayout.minimumLineSpacing = 10.0
-        self.collectionView!.pagingEnabled = true
-        self.collectionView!.collectionViewLayout = flowLayout
+        self.myCollectionView.registerClass(MDCGalleryCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        myCollectionView.frame.size = CGSize(width: self.view.frame.width, height: self.view.frame.height)
     }
     
     
     
     // MARK: Prep gallery
     func loadGallery() {
-        imageArray = ["img1.jpg","img2.jpg","img3.jpg","img4.jpg"]
+        imageArray = ["img1.jpg","img2.jpg","img3.jpg","img4.jpg","img1.jpg","img2.jpg","img3.jpg","img4.jpg"]
     }
 
 

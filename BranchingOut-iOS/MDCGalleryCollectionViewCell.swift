@@ -12,29 +12,25 @@ class MDCGalleryCollectionViewCell: UICollectionViewCell {
     var imageName: String!
     var imageView: UIImageView!
     
-    override func init(frame: CGRect) {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         imageView = UIImageView(frame: frame)
         self.contentView.addSubview(imageView)
     }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     func updateCell() {
-        let sourcePath = NSBundle.mainBundle().resourcePath?.stringByAppendingString("Assets")
-        let filename = NSString(format: "%@/%@", sourcePath!,imageName)
         
-        let image = UIImage(contentsOfFile: filename as String)
+        let image = UIImage(named: imageName)
+        
+        imageView.contentMode = UIViewContentMode.ScaleAspectFill
+        imageView.image = image
+        imageView.clipsToBounds = true
+        
         
     }
     
 }
-
-/*
--(void)updateCell {
-NSString *sourcePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Assets"];
-NSString *filename = [NSString stringWithFormat:@"%@/%@", sourcePath, self.imageName];
-
-UIImage *image = [UIImage imageWithContentsOfFile:filename];
-
-[self.imageView setContentMode:UIViewContentModeScaleAspectFit];
-[self.imageView setImage:image];
-}
-*/
