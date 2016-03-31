@@ -13,12 +13,13 @@ var imageArray = []
 
 class MDCGalleryViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     @IBOutlet var myCollectionView: UICollectionView!
-
+    let originalFrame = CGSize(width: 160, height: 200)
+    var biggerFrame = CGSize(width: 300, height: 500)
+    var selectedRow = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
-        
         // Register cell classes
         setupCollectionView()
         
@@ -39,11 +40,16 @@ class MDCGalleryViewController: UIViewController, UICollectionViewDataSource, UI
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
-        return 0
+        return 20.0
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
-        return 0
+        return 0.0
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+        let insets = UIEdgeInsetsMake(20, 20, 10, 20)
+        return insets
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -53,7 +59,8 @@ class MDCGalleryViewController: UIViewController, UICollectionViewDataSource, UI
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         var retval: CGSize = self.view.frame.size
         retval.width = myCollectionView.frame.size.height
-        return retval
+        let thumbs = CGSize(width: 160, height: 200)
+        return thumbs
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -67,9 +74,23 @@ class MDCGalleryViewController: UIViewController, UICollectionViewDataSource, UI
         return cell
     }
     
+    // MARK: Collectionview delegates
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
+        selectedRow = indexPath.row
+//        let dest = self.storyboard?.instantiateViewControllerWithIdentifier("popupVC") as! MDCPopupViewController
+//        dest.imagePath = imageArray[selectedRow] as! String
+        let popup: STPopupController = STPopupController.init(rootViewController: MDCPopupViewController())
+        popup.containerView.layer.cornerRadius = 5
+        popup.presentInViewController(self)
+
+    }
+    
+    
+    
     // MARK: Shenanigans
     func setupCollectionView() {
-        self.myCollectionView.registerClass(MDCGalleryCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        myCollectionView.backgroundColor = UIColor.whiteColor()
         myCollectionView.frame.size = CGSize(width: self.view.frame.width, height: self.view.frame.height)
     }
     
@@ -77,7 +98,15 @@ class MDCGalleryViewController: UIViewController, UICollectionViewDataSource, UI
     
     // MARK: Prep gallery
     func loadGallery() {
-        imageArray = ["img1.jpg","img2.jpg","img3.jpg","img4.jpg","img1.jpg","img2.jpg","img3.jpg","img4.jpg"]
+        imageArray = ["img1.jpg","img2.jpg","img3.jpg", "img4.jpg", "img2.jpg","img3.jpg", "img4.jpg", "img1.jpg"]
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.destinationViewController.isKindOfClass(MDCPopupViewController)) {
+            let vc = segue.destinationViewController as! MDCPopupViewController
+            let path = imageArray[selectedRow] as? String
+            vc.imagePath = path
+        }
     }
 
 

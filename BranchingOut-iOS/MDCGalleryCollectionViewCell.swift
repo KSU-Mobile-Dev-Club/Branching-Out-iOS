@@ -10,27 +10,19 @@ import UIKit
 
 class MDCGalleryCollectionViewCell: UICollectionViewCell {
     var imageName: String!
-    var imageView: UIImageView!
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        imageView = UIImageView(frame: frame)
-        self.contentView.addSubview(imageView)
-    }
+    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var imageLabel: UILabel!
 
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
     func updateCell() {
         
-        let image = UIImage(named: imageName)
+        var image = UIImage(named: imageName)
+        let imageData = UIImageJPEGRepresentation(image!, 0.1)
+        image = UIImage(data: imageData!)
+        imageLabel.text = imageName
         
         imageView.contentMode = UIViewContentMode.ScaleAspectFill
         imageView.image = image
         imageView.clipsToBounds = true
-        
-        
     }
-    
 }

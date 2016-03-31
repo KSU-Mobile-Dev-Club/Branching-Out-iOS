@@ -18,6 +18,8 @@
 		283272E21CAC845500179CF9 /* img3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 283272DE1CAC845500179CF9 /* img3.jpg */; };
 		283272E31CAC845500179CF9 /* img4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 283272DF1CAC845500179CF9 /* img4.jpg */; };
 		283272E81CAC8C1D00179CF9 /* MDCGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283272E71CAC8C1D00179CF9 /* MDCGalleryViewController.swift */; };
+		283272EA1CADCAD000179CF9 /* MDCPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283272E91CADCAD000179CF9 /* MDCPopupViewController.swift */; };
+		E6D61218A8337F7106F0A0BF /* libPods-BranchingOut-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CF35EEC4305F9ED2C81F20C /* libPods-BranchingOut-iOS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,10 @@
 		283272DE1CAC845500179CF9 /* img3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img3.jpg; sourceTree = "<group>"; };
 		283272DF1CAC845500179CF9 /* img4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img4.jpg; sourceTree = "<group>"; };
 		283272E71CAC8C1D00179CF9 /* MDCGalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDCGalleryViewController.swift; sourceTree = "<group>"; };
+		283272E91CADCAD000179CF9 /* MDCPopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDCPopupViewController.swift; sourceTree = "<group>"; };
+		4CF35EEC4305F9ED2C81F20C /* libPods-BranchingOut-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BranchingOut-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		71078D493F3F8685D6C5A2EA /* Pods-BranchingOut-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BranchingOut-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BranchingOut-iOS/Pods-BranchingOut-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		B4E3454791EC011D38AB27BF /* Pods-BranchingOut-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BranchingOut-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-BranchingOut-iOS/Pods-BranchingOut-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,17 +48,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6D61218A8337F7106F0A0BF /* libPods-BranchingOut-iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D3F3CE1C4A3AEB60B91734C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				71078D493F3F8685D6C5A2EA /* Pods-BranchingOut-iOS.debug.xcconfig */,
+				B4E3454791EC011D38AB27BF /* Pods-BranchingOut-iOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		280E63AA1C8922EE006348C6 = {
 			isa = PBXGroup;
 			children = (
 				280E63B51C8922EE006348C6 /* BranchingOut-iOS */,
 				280E63B41C8922EE006348C6 /* Products */,
+				1D3F3CE1C4A3AEB60B91734C /* Pods */,
+				D0756E0EEDB99A68FE681413 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,10 +96,19 @@
 				280E63C21C8922EE006348C6 /* Info.plist */,
 				283272E71CAC8C1D00179CF9 /* MDCGalleryViewController.swift */,
 				283272D61C9260F700179CF9 /* MDCGalleryCollectionViewCell.swift */,
+				283272E91CADCAD000179CF9 /* MDCPopupViewController.swift */,
 				283272D31C92589400179CF9 /* BranchingOut-iOS-Bridging-Header.h */,
 				283272DA1CAC832900179CF9 /* MDCAppDelegate.swift */,
 			);
 			path = "BranchingOut-iOS";
+			sourceTree = "<group>";
+		};
+		D0756E0EEDB99A68FE681413 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4CF35EEC4305F9ED2C81F20C /* libPods-BranchingOut-iOS.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,9 +118,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 280E63C51C8922EE006348C6 /* Build configuration list for PBXNativeTarget "BranchingOut-iOS" */;
 			buildPhases = (
+				4D0D0F2C4ACAE82121180367 /* Check Pods Manifest.lock */,
 				280E63AF1C8922EE006348C6 /* Sources */,
 				280E63B01C8922EE006348C6 /* Frameworks */,
 				280E63B11C8922EE006348C6 /* Resources */,
+				9B209DBD3CA72D36372804A8 /* Embed Pods Frameworks */,
+				DF2872FFE6D3287B9D6929BC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -156,6 +186,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4D0D0F2C4ACAE82121180367 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9B209DBD3CA72D36372804A8 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BranchingOut-iOS/Pods-BranchingOut-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF2872FFE6D3287B9D6929BC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BranchingOut-iOS/Pods-BranchingOut-iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		280E63AF1C8922EE006348C6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -163,6 +241,7 @@
 			files = (
 				283272E81CAC8C1D00179CF9 /* MDCGalleryViewController.swift in Sources */,
 				283272D71C9260F700179CF9 /* MDCGalleryCollectionViewCell.swift in Sources */,
+				283272EA1CADCAD000179CF9 /* MDCPopupViewController.swift in Sources */,
 				283272DB1CAC832900179CF9 /* MDCAppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +351,7 @@
 		};
 		280E63C61C8922EE006348C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71078D493F3F8685D6C5A2EA /* Pods-BranchingOut-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -286,6 +366,7 @@
 		};
 		280E63C71C8922EE006348C6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4E3454791EC011D38AB27BF /* Pods-BranchingOut-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
