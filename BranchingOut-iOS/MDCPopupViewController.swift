@@ -12,20 +12,21 @@ class MDCPopupViewController: UIViewController {
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var descriptionLabel: UILabel!
     var imagePath: String!
+//
+//    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+//        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+//        
+//    }
 
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        self.title = "Hello"
-        self.contentSizeInPopup = CGSizeMake(300, 400)
-        self.landscapeContentSizeInPopup = CGSizeMake(400, 200)
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
+//    required init?(coder aDecoder: NSCoder) {
+//        super.init(coder: aDecoder)
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Hello"
+        self.descriptionLabel.text = "This is pretty stupid"
         
         
         // Do any additional setup after loading the view.

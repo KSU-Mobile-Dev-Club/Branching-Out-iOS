@@ -16,6 +16,7 @@ class MDCGalleryViewController: UIViewController, UICollectionViewDataSource, UI
     let originalFrame = CGSize(width: 160, height: 200)
     var biggerFrame = CGSize(width: 300, height: 500)
     var selectedRow = 0
+    var popupController:CNPPopupController = CNPPopupController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,14 +77,7 @@ class MDCGalleryViewController: UIViewController, UICollectionViewDataSource, UI
     
     // MARK: Collectionview delegates
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        
-        selectedRow = indexPath.row
-//        let dest = self.storyboard?.instantiateViewControllerWithIdentifier("popupVC") as! MDCPopupViewController
-//        dest.imagePath = imageArray[selectedRow] as! String
-        let popup: STPopupController = STPopupController.init(rootViewController: MDCPopupViewController())
-        popup.containerView.layer.cornerRadius = 5
-        popup.presentInViewController(self)
-
+        self.showPopupWithStyle(CNPPopupStyle.Centered, indexPath: indexPath)
     }
     
     
@@ -107,6 +101,43 @@ class MDCGalleryViewController: UIViewController, UICollectionViewDataSource, UI
             let path = imageArray[selectedRow] as? String
             vc.imagePath = path
         }
+    }
+    
+    func showPopupWithStyle(popupStyle: CNPPopupStyle, indexPath: NSIndexPath) {
+        
+        let imagePath = imageArray[indexPath.row] as! String
+        let imageView = UIImageView.init(image: UIImage.init(named: imagePath))
+        imageView.frame = CGRectMake(0, 0, 200, 300)
+        imageView.center = self.view.center
+
+        
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        paragraphStyle.alignment = NSTextAlignment.Center
+        
+        let title = NSAttributedString(string: imagePath, attributes: [NSFontAttributeName: UIFont.systemFontOfSize(24), NSParagraphStyleAttributeName: paragraphStyle])
+        
+        let button = CNPPopupButton.init(frame: CGRectMake(0, 0, 200, 60))
+        button.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        button.titleLabel?.font = UIFont.boldSystemFontOfSize(18)
+        button.setTitle("Dismiss", forState: UIControlState.Normal)
+        
+        button.backgroundColor = UIColor.init(colorLiteralRed: 0.46, green: 0.8, blue: 1.0, alpha: 1.0)
+        
+        button.layer.cornerRadius = 4;
+        button.selectionHandler = { (CNPPopupButton button) -> Void in
+            self.popupController.dismissPopupControllerAnimated(true)
+        }
+        
+        let titleLabel = UILabel()
+        titleLabel.numberOfLines = 0;
+        titleLabel.attributedText = title
+        
+
+        self.popupController = CNPPopupController(contents:[titleLabel, imageView, button])
+        self.popupController.theme = CNPPopupTheme.defaultTheme()
+        self.popupController.theme.popupStyle = popupStyle
+        self.popupController.presentPopupControllerAnimated(true)
     }
 
 
