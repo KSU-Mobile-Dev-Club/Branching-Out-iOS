@@ -13,6 +13,7 @@
 		7F06D87B1C9258AF00FA3E13 /* MDC.NearbyTrees.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F06D87A1C9258AF00FA3E13 /* MDC.NearbyTrees.storyboard */; };
 		7F06D8801C925A4A00FA3E13 /* MDCNearbyTreesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F06D87F1C925A4A00FA3E13 /* MDCNearbyTreesViewController.swift */; };
 		7F06D8821C92657200FA3E13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F06D8811C92657200FA3E13 /* AppDelegate.swift */; };
+		7FB4E2A21CAE0CF6003A94AA /* NearbyTreesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB4E2A11CAE0CF6003A94AA /* NearbyTreesTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		7F06D87C1C9259F700FA3E13 /* BranchingOut-iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BranchingOut-iOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		7F06D87F1C925A4A00FA3E13 /* MDCNearbyTreesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDCNearbyTreesViewController.swift; sourceTree = "<group>"; };
 		7F06D8811C92657200FA3E13 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7FB4E2A11CAE0CF6003A94AA /* NearbyTreesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyTreesTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				7F06D8811C92657200FA3E13 /* AppDelegate.swift */,
+				7FB4E2A11CAE0CF6003A94AA /* NearbyTreesTableViewCell.swift */,
 				7F06D87F1C925A4A00FA3E13 /* MDCNearbyTreesViewController.swift */,
 				7F06D87A1C9258AF00FA3E13 /* MDC.NearbyTrees.storyboard */,
 				280E63BA1C8922EE006348C6 /* Main.storyboard */,
@@ -143,6 +146,7 @@
 			files = (
 				7F06D8821C92657200FA3E13 /* AppDelegate.swift in Sources */,
 				7F06D8801C925A4A00FA3E13 /* MDCNearbyTreesViewController.swift in Sources */,
+				7FB4E2A21CAE0CF6003A94AA /* NearbyTreesTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

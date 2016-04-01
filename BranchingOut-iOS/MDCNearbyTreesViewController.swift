@@ -20,7 +20,18 @@ class MDCNearbyTreesViewController: UITableViewController{
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let treeCell = tableView.dequeueReusableCellWithIdentifier("nearbyTreeCell")!
         let treeText =  tempArray[indexPath.row]
+        let description =
         treeCell.textLabel?.text = treeText
+        let treeImage = UIImage(named: "tempPicture")
+        let nearbyTreeDistance = 5.5
+        treeCell.imageView?.image = treeImage
+        treeCell.detailTextLabel?.text = "\(nearbyTreeDistance) miles away"
+        
+//        let treeCell: NearbyTreesTableViewCell = tableView.dequeueReusableCellWithIdentifier("MDCnearbyTreeCell")! as! NearbyTreesTableViewCell
+//        treeCell.treeImage?.text = "hello"
+//        treeCell.treeDescriptionLabel?.image = UIImage(named: "tempPicture")
+//        treeCell.treeDistanceLabel?.text = "yeahyeah"
+//        treeCell.treeTitleLabel?.text = "title"
         return treeCell
     }
     
