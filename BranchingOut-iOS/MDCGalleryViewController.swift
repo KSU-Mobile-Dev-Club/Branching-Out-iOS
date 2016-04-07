@@ -17,7 +17,7 @@ class MDCGalleryViewController: UIViewController, UICollectionViewDataSource, UI
     var biggerFrame = CGSize(width: 300, height: 500)
     var selectedRow = 0
     var popupController:CNPPopupController = CNPPopupController()
-    var treeArray: [MDCTree]!
+    var treeArray: [MDCTree]! = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,13 +28,7 @@ class MDCGalleryViewController: UIViewController, UICollectionViewDataSource, UI
 //        // Load the images
 //        loadGallery()
         
-        let testObject = PFObject(className: "TestObject")
-        testObject["foo"] = "bar"
-        testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-            print("Object has been saved.")
-        }
-        
-        self.treeArray = loadTreeDataForCollectionView(myCollectionView)
+        loadTreeDataForCollectionView(myCollectionView)
     }
 
     override func didReceiveMemoryWarning() {
@@ -155,7 +149,7 @@ class MDCGalleryViewController: UIViewController, UICollectionViewDataSource, UI
     }
     
     // MARK: Load data from Parse
-    func loadTreeDataForCollectionView(collectionView: UICollectionView!) -> [MDCTree] {
+    func loadTreeDataForCollectionView(collectionView: UICollectionView!) {
         var trees: [MDCTree]! = []
         let query  = PFQuery(className: "trees")
         query.limit = 5
@@ -163,10 +157,9 @@ class MDCGalleryViewController: UIViewController, UICollectionViewDataSource, UI
             for item: PFObject in object! {
                 trees?.append(self.makeTreeObjects(item))
             }
+            self.treeArray = trees
             collectionView.reloadData()
         }
-        
-        return trees
     }
     
     func makeTreeObjects(parseObject: PFObject) -> MDCTree {
