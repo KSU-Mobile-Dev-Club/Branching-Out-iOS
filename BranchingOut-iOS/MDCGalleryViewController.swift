@@ -17,7 +17,7 @@ class MDCGalleryViewController: UIViewController, UICollectionViewDataSource, UI
     var biggerFrame = CGSize(width: 300, height: 500)
     var selectedRow = 0
     var popupController:CNPPopupController = CNPPopupController()
-    var treeArray: [MDCTree]!
+    var treeArray: [MDCTree]! = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,13 +28,7 @@ class MDCGalleryViewController: UIViewController, UICollectionViewDataSource, UI
 //        // Load the images
 //        loadGallery()
         
-        let testObject = PFObject(className: "TestObject")
-        testObject["foo"] = "bar"
-        testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-            print("Object has been saved.")
-        }
-        
-        self.treeArray = loadTreeDataForCollectionView(myCollectionView)
+        loadTreeDataForCollectionView(myCollectionView)
     }
 
     override func didReceiveMemoryWarning() {
@@ -155,26 +149,26 @@ class MDCGalleryViewController: UIViewController, UICollectionViewDataSource, UI
     }
     
     // MARK: Load data from Parse
-    func loadTreeDataForCollectionView(collectionView: UICollectionView!) -> [MDCTree] {
+    func loadTreeDataForCollectionView(collectionView: UICollectionView!) {
         var trees: [MDCTree]! = []
         let query  = PFQuery(className: "trees")
-        query.limit = 5
         query.findObjectsInBackgroundWithBlock { (object: [PFObject]?, error: NSError?) -> Void in
             for item: PFObject in object! {
                 trees?.append(self.makeTreeObjects(item))
             }
+            self.treeArray = trees
             collectionView.reloadData()
         }
-        
-        return trees
     }
     
     func makeTreeObjects(parseObject: PFObject) -> MDCTree {
         let myTree = MDCTree()
         myTree.commonName = parseObject["common"] as? String
-        myTree.scientificName = parseObject["scientificName"] as? String
+        myTree.scientificName = parseObject["scientific"] as? String
         myTree.treeID = parseObject["treeId"] as? String
-        myTree.objectID = parseObject["objectId"] as? String
+        myTree.objectID = parseObject.objectId
+        myTree.wikipedia = parseObject["wiki"] as? String
+        myTree.image = UIImage(named: "img1.jpg")
         
         return myTree
     }

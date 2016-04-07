@@ -16,6 +16,7 @@ class MDCTree {
     var scientificName: String?
     var coordinationPoint: String?
     var wikipedia: String?
+    var image: UIImage?
     
     init () {
         

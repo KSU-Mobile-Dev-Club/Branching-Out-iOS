@@ -17,12 +17,23 @@ class MDCAppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         // Initialize Parse.
-        let configuration = ParseClientConfiguration {
+        
+        /*let configuration = ParseClientConfiguration {
             $0.applicationId = "TcxRgMwktldvVspKoslGldSSommdBFIByYZSgdgt"
             $0.clientKey = "xhDXegJowYtDtsCRRkdjRnQgdzbeChRujcyMtxHv"
             $0.server = "http://atodd.me:1337/parse/"
         }
-        Parse.initializeWithConfiguration(configuration)
+        Parse.initializeWithConfiguration(configuration)*/
+        
+        let config = ParseClientConfiguration(block: {
+        (ParseMutableClientConfiguration) -> Void in
+        
+        ParseMutableClientConfiguration.applicationId = "TcxRgMwktldvVspKoslGldSSommdBFIByYZSgdgt";
+        ParseMutableClientConfiguration.clientKey = "xhDXegJowYtDtsCRRkdjRnQgdzbeChRujcyMtxHv";
+        ParseMutableClientConfiguration.server = "http://atodd.me:1337/parse/";
+        });
+        
+        Parse.initializeWithConfiguration(config);
         
         return true
     }

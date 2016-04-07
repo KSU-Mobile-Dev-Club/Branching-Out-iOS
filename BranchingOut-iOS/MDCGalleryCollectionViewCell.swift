@@ -28,5 +28,9 @@ class MDCGalleryCollectionViewCell: UICollectionViewCell {
     
     func parseTest() {
         imageLabel.text = imageName
+        let image = UIImage(named: "img1.jpg")
+        imageView.contentMode = UIViewContentMode.ScaleAspectFill
+        imageView.image = image
+        imageView.clipsToBounds = true
     }
 }
