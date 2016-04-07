@@ -28,10 +28,11 @@ class MDCNearbyTreesViewController: UITableViewController{
         treeCell.detailTextLabel?.text = "\(nearbyTreeDistance) miles away"
         
 //        let treeCell: NearbyTreesTableViewCell = tableView.dequeueReusableCellWithIdentifier("MDCnearbyTreeCell")! as! NearbyTreesTableViewCell
-//        treeCell.treeImage?.text = "hello"
+//        treeCell.treeImage?.text = "This tree is located on the west side of campus....."
 //        treeCell.treeDescriptionLabel?.image = UIImage(named: "tempPicture")
-//        treeCell.treeDistanceLabel?.text = "yeahyeah"
-//        treeCell.treeTitleLabel?.text = "title"
+//        
+//        treeCell.treeDistanceLabel?.text = "0.0 miles away"
+//        treeCell.treeTitleLabel?.text = "Nearby Plants"
         return treeCell
     }
     
