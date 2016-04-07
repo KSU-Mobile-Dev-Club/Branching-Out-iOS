@@ -26,6 +26,7 @@
 		28D813831CB6B56F00556B97 /* MapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28D813821CB6B56F00556B97 /* MapView.storyboard */; };
 		28D813851CB6B82E00556B97 /* MDCHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D813841CB6B82E00556B97 /* MDCHomeViewController.swift */; };
 		28D813871CB6B87B00556B97 /* MDCMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D813861CB6B87B00556B97 /* MDCMapViewController.swift */; };
+		28D8138C1CB7187400556B97 /* OCMapViewSampleHelpAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D8138B1CB7187400556B97 /* OCMapViewSampleHelpAnnotation.m */; };
 		650C966F1C9259DE006C952A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 650C966E1C9259DE006C952A /* Home.storyboard */; };
 		7F06D87B1C9258AF00FA3E13 /* NearbyTrees.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F06D87A1C9258AF00FA3E13 /* NearbyTrees.storyboard */; };
 		E6D61218A8337F7106F0A0BF /* libPods-BranchingOut-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CF35EEC4305F9ED2C81F20C /* libPods-BranchingOut-iOS.a */; };
@@ -52,6 +53,8 @@
 		28D813821CB6B56F00556B97 /* MapView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MapView.storyboard; sourceTree = "<group>"; };
 		28D813841CB6B82E00556B97 /* MDCHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDCHomeViewController.swift; sourceTree = "<group>"; };
 		28D813861CB6B87B00556B97 /* MDCMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDCMapViewController.swift; sourceTree = "<group>"; };
+		28D8138A1CB7187400556B97 /* OCMapViewSampleHelpAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMapViewSampleHelpAnnotation.h; sourceTree = "<group>"; };
+		28D8138B1CB7187400556B97 /* OCMapViewSampleHelpAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCMapViewSampleHelpAnnotation.m; sourceTree = "<group>"; };
 		4CF35EEC4305F9ED2C81F20C /* libPods-BranchingOut-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BranchingOut-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		650C966E1C9259DE006C952A /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		71078D493F3F8685D6C5A2EA /* Pods-BranchingOut-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BranchingOut-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BranchingOut-iOS/Pods-BranchingOut-iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -117,6 +120,8 @@
 				283272DE1CAC845500179CF9 /* img3.jpg */,
 				283272DF1CAC845500179CF9 /* img4.jpg */,
 				280E63BF1C8922EE006348C6 /* LaunchScreen.storyboard */,
+				28D8138A1CB7187400556B97 /* OCMapViewSampleHelpAnnotation.h */,
+				28D8138B1CB7187400556B97 /* OCMapViewSampleHelpAnnotation.m */,
 				280E63C21C8922EE006348C6 /* Info.plist */,
 				7F06D87C1C9259F700FA3E13 /* BranchingOut-iOS-Bridging-Header.h */,
 				650C966E1C9259DE006C952A /* Home.storyboard */,
@@ -275,6 +280,7 @@
 				28D8137E1CB6B18B00556B97 /* MDCNearbyTreesViewController.swift in Sources */,
 				28D8137D1CB5CCAF00556B97 /* MDCTree.swift in Sources */,
 				28D813851CB6B82E00556B97 /* MDCHomeViewController.swift in Sources */,
+				28D8138C1CB7187400556B97 /* OCMapViewSampleHelpAnnotation.m in Sources */,
 				28D813871CB6B87B00556B97 /* MDCMapViewController.swift in Sources */,
 				28D8137F1CB6B18E00556B97 /* NearbyTreesTableViewCell.swift in Sources */,
 				283272E81CAC8C1D00179CF9 /* MDCGalleryViewController.swift in Sources */,
