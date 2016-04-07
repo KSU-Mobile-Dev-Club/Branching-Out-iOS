@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4jm-Aq-tMs">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Branching Out-->
         <scene sceneID="2fs-bh-QDj">
             <objects>
-                <viewController id="AHR-Xo-8I3" sceneMemberID="viewController">
+                <viewController id="AHR-Xo-8I3" customClass="MDCHomeViewController" customModule="BranchingOut_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mpy-bU-2dG"/>
                         <viewControllerLayoutGuide type="bottom" id="XiX-6V-aCr"/>
@@ -17,25 +18,69 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="testImage" translatesAutoresizingMaskIntoConstraints="NO" id="A2q-L0-trE">
-                                <rect key="frame" x="59" y="28" width="482" height="333"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gardens_Fotor.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="A2q-L0-trE">
+                                <rect key="frame" x="0.0" y="64" width="600" height="297"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="297" id="kWo-P4-807"/>
+                                </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Powered by Kansas State Mobile Development Club" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="S4F-UI-tE8">
-                                <rect key="frame" x="59" y="369" width="482" height="211"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" bounces="NO" scrollEnabled="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="S4F-UI-tE8">
+                                <rect key="frame" x="59" y="409" width="482" height="158"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Tincidunt eu elit diam magnis pretium accumsan etiam id urna. Ridiculus ultricies curae quis et rhoncus velit. Lobortis elementum aliquet nec vitae laoreet eget cubilia quam non etiam odio tincidunt montes. Elementum sem parturient nulla quam placerat viverra mauris non cum elit tempus ullamcorper dolor. </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELCOME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9N-uv-H8a">
+                                <rect key="frame" x="59" y="380" width="482" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XiX-6V-aCr" firstAttribute="top" secondItem="S4F-UI-tE8" secondAttribute="bottom" constant="33" id="1Ti-pI-YX7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="H9N-uv-H8a" secondAttribute="trailing" constant="39" id="4Wc-D8-xHA"/>
+                            <constraint firstItem="A2q-L0-trE" firstAttribute="leading" secondItem="yUI-aq-T1q" secondAttribute="leadingMargin" constant="-20" id="7Zg-1W-XQE"/>
+                            <constraint firstItem="H9N-uv-H8a" firstAttribute="leading" secondItem="yUI-aq-T1q" secondAttribute="leadingMargin" constant="39" id="NDO-16-nNP"/>
+                            <constraint firstItem="A2q-L0-trE" firstAttribute="top" secondItem="mpy-bU-2dG" secondAttribute="bottom" id="RQp-zl-671"/>
+                            <constraint firstItem="S4F-UI-tE8" firstAttribute="top" secondItem="H9N-uv-H8a" secondAttribute="bottom" constant="8" id="Zi7-6r-IT3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="S4F-UI-tE8" secondAttribute="trailing" constant="39" id="k6C-7l-gm0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="A2q-L0-trE" secondAttribute="trailing" constant="-20" id="l2U-5H-CC3"/>
+                            <constraint firstItem="S4F-UI-tE8" firstAttribute="leading" secondItem="yUI-aq-T1q" secondAttribute="leadingMargin" constant="39" id="mWw-x5-J5z"/>
+                            <constraint firstItem="H9N-uv-H8a" firstAttribute="top" secondItem="A2q-L0-trE" secondAttribute="bottom" constant="19" id="oCo-3M-oLu"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="home-7" id="mZ8-IM-GYY"/>
+                    <navigationItem key="navigationItem" title="Branching Out" id="yh8-nz-wzZ"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NG1-kW-264" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1117" y="444"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="jsQ-j0-uSc">
+            <objects>
+                <navigationController storyboardIdentifier="homeView" title="Home" automaticallyAdjustsScrollViewInsets="NO" id="4jm-Aq-tMs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Smv-Im-34z">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="AHR-Xo-8I3" kind="relationship" relationship="rootViewController" id="HlS-Gg-fXQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ajX-4B-fbI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="305" y="444"/>
         </scene>
     </scenes>
     <resources>
-        <image name="testImage" width="144" height="144"/>
+        <image name="Gardens_Fotor.jpg" width="999" height="562"/>
+        <image name="home-7" width="30" height="30"/>
     </resources>
 </document>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Zob-0n-wXh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Nearby Trees View Controller-->
+        <!--Nearby Trees-->
         <scene sceneID="cYf-Dj-Esj">
             <objects>
-                <tableViewController id="R0y-9d-cXR" customClass="MDCNearbyTreesViewController" customModule="BranchingOut_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="R0y-9d-cXR" customClass="MDCNearbyTreesViewController" customModule="BranchingOut_iOS" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="113" sectionHeaderHeight="28" sectionFooterHeight="28" id="Bxt-XS-dPT">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,30 +43,30 @@
                                 <rect key="frame" x="0.0" y="205" width="600" height="113"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZAX-Rw-aaa" id="XBn-hK-EQH">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="112.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="113"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E7N-cj-3Ir">
-                                            <rect key="frame" x="201" y="25" width="42" height="20.5"/>
+                                            <rect key="frame" x="201" y="25" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bK9-u0-xTI">
-                                            <rect key="frame" x="0.0" y="0.0" width="191" height="112.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="191" height="113"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="191" id="99r-f4-jdd"/>
                                                 <constraint firstAttribute="height" constant="112.5" id="v2N-35-Yun"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="td0-H8-HFw">
-                                            <rect key="frame" x="541" y="46" width="42" height="20.5"/>
+                                            <rect key="frame" x="541" y="46" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGe-Md-3HS">
-                                            <rect key="frame" x="201" y="67" width="42" height="20.5"/>
+                                            <rect key="frame" x="201" y="67" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -97,29 +97,34 @@
                             <outlet property="delegate" destination="R0y-9d-cXR" id="fPw-Sg-tH7"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Kqj-Yh-kUa"/>
+                    <navigationItem key="navigationItem" title="Nearby Trees" id="Kqj-Yh-kUa"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x2z-xu-Qnl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1077" y="375"/>
+            <point key="canvasLocation" x="1889" y="375"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="juV-nw-GLF">
+        <!--Nearby-->
+        <scene sceneID="cZE-sH-lzd">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zob-0n-wXh" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="nearbyView" title="Nearby" automaticallyAdjustsScrollViewInsets="NO" id="2jR-qd-E0O" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Nearby" image="pin-map-7" id="yni-2b-yYm"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gr7-hr-EAl">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="N1T-bI-cmR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="R0y-9d-cXR" kind="relationship" relationship="rootViewController" id="OHh-sd-K2U"/>
+                        <segue destination="R0y-9d-cXR" kind="relationship" relationship="rootViewController" id="hgD-Fj-1GE"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NvA-G2-N39" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F5I-GZ-HWb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="265" y="375"/>
+            <point key="canvasLocation" x="1077" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pin-map-7" width="30" height="30"/>
+    </resources>
 </document>

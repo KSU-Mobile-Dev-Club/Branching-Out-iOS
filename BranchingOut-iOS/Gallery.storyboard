@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Gallery-->
         <scene sceneID="o13-aJ-voC">
             <objects>
-                <navigationController id="EjQ-bR-kPD" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="galleryView" title="Gallery" id="EjQ-bR-kPD" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vSV-nw-J1A">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -22,7 +22,7 @@
             </objects>
             <point key="canvasLocation" x="306" y="150"/>
         </scene>
-        <!--Gallery View Controller-->
+        <!--Tree Gallery-->
         <scene sceneID="YJJ-p0-9EU">
             <objects>
                 <viewController id="sGz-vJ-d4g" customClass="MDCGalleryViewController" customModule="BranchingOut_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -34,7 +34,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8fk-Pf-33P">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8fk-Pf-33P">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" red="0.1883597337" green="0.7848434728" blue="1" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3qb-bh-x4t">
@@ -97,7 +97,9 @@
                             <constraint firstItem="B5I-SE-6SH" firstAttribute="top" secondItem="8fk-Pf-33P" secondAttribute="bottom" id="j6O-FS-tJ2"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="y2c-M2-aOm"/>
+                    <tabBarItem key="tabBarItem" title="Gallery" image="photos-simple-7" id="BqC-qi-cKR"/>
+                    <navigationItem key="navigationItem" title="Tree Gallery" id="y2c-M2-aOm"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="myCollectionView" destination="8fk-Pf-33P" id="YiV-FH-8uh"/>
                     </connections>
@@ -171,4 +173,7 @@
             <point key="canvasLocation" x="1785" y="-40"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="photos-simple-7" width="30" height="30"/>
+    </resources>
 </document>

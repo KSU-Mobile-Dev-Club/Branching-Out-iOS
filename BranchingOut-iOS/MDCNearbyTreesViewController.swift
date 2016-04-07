@@ -11,6 +11,16 @@ import UIKit
 
 class MDCNearbyTreesViewController: UITableViewController{
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+       
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
     // Temporary array, delete when titles are available
     let tempArray: [String] = ["John Cena", "John Cena", "John Cena", "John Cena", "John Cena", "John Cena", "John Cena", "John Cena", "John Cena"]
     

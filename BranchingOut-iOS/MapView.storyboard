@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Map-->
+        <scene sceneID="rP3-Fg-K4h">
+            <objects>
+                <viewController storyboardIdentifier="mapView" title="Map" id="FiI-IE-XoP" customClass="MDCMapViewController" customModule="BranchingOut_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kfp-Hc-jb8"/>
+                        <viewControllerLayoutGuide type="bottom" id="Oka-fp-jDH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uRe-eA-TQu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" image="paper-map-7" id="neV-8C-dkr"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jY7-O7-Vh7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="459" y="367"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="paper-map-7" width="30" height="30"/>
+    </resources>
+</document>
