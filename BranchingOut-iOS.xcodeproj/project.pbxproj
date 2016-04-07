@@ -10,11 +10,6 @@
 		280E63BC1C8922EE006348C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 280E63BA1C8922EE006348C6 /* Main.storyboard */; };
 		280E63BE1C8922EE006348C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 280E63BD1C8922EE006348C6 /* Assets.xcassets */; };
 		280E63C11C8922EE006348C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 280E63BF1C8922EE006348C6 /* LaunchScreen.storyboard */; };
-		7F06D87B1C9258AF00FA3E13 /* MDC.NearbyTrees.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F06D87A1C9258AF00FA3E13 /* MDC.NearbyTrees.storyboard */; };
-		7F06D8801C925A4A00FA3E13 /* MDCNearbyTreesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F06D87F1C925A4A00FA3E13 /* MDCNearbyTreesViewController.swift */; };
-		7F06D8821C92657200FA3E13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F06D8811C92657200FA3E13 /* AppDelegate.swift */; };
-		7FB4E2A21CAE0CF6003A94AA /* NearbyTreesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB4E2A11CAE0CF6003A94AA /* NearbyTreesTableViewCell.swift */; };
-		650C966F1C9259DE006C952A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 650C966E1C9259DE006C952A /* Home.storyboard */; };
 		283272D21C92561100179CF9 /* Gallery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 283272D11C92561100179CF9 /* Gallery.storyboard */; };
 		283272D71C9260F700179CF9 /* MDCGalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283272D61C9260F700179CF9 /* MDCGalleryCollectionViewCell.swift */; };
 		283272DB1CAC832900179CF9 /* MDCAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283272DA1CAC832900179CF9 /* MDCAppDelegate.swift */; };
@@ -24,6 +19,10 @@
 		283272E31CAC845500179CF9 /* img4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 283272DF1CAC845500179CF9 /* img4.jpg */; };
 		283272E81CAC8C1D00179CF9 /* MDCGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283272E71CAC8C1D00179CF9 /* MDCGalleryViewController.swift */; };
 		283272EA1CADCAD000179CF9 /* MDCPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283272E91CADCAD000179CF9 /* MDCPopupViewController.swift */; };
+		650C966F1C9259DE006C952A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 650C966E1C9259DE006C952A /* Home.storyboard */; };
+		7F06D87B1C9258AF00FA3E13 /* MDC.NearbyTrees.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F06D87A1C9258AF00FA3E13 /* MDC.NearbyTrees.storyboard */; };
+		7F06D8801C925A4A00FA3E13 /* MDCNearbyTreesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F06D87F1C925A4A00FA3E13 /* MDCNearbyTreesViewController.swift */; };
+		7FB4E2A21CAE0CF6003A94AA /* NearbyTreesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB4E2A11CAE0CF6003A94AA /* NearbyTreesTableViewCell.swift */; };
 		E6D61218A8337F7106F0A0BF /* libPods-BranchingOut-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CF35EEC4305F9ED2C81F20C /* libPods-BranchingOut-iOS.a */; };
 /* End PBXBuildFile section */
 
@@ -33,12 +32,6 @@
 		280E63BD1C8922EE006348C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		280E63C01C8922EE006348C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		280E63C21C8922EE006348C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7F06D87A1C9258AF00FA3E13 /* MDC.NearbyTrees.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MDC.NearbyTrees.storyboard; sourceTree = "<group>"; };
-		7F06D87C1C9259F700FA3E13 /* BranchingOut-iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BranchingOut-iOS-Bridging-Header.h"; sourceTree = "<group>"; };
-		7F06D87F1C925A4A00FA3E13 /* MDCNearbyTreesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDCNearbyTreesViewController.swift; sourceTree = "<group>"; };
-		7F06D8811C92657200FA3E13 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7FB4E2A11CAE0CF6003A94AA /* NearbyTreesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyTreesTableViewCell.swift; sourceTree = "<group>"; };
-		650C966E1C9259DE006C952A /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		283272D11C92561100179CF9 /* Gallery.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Gallery.storyboard; sourceTree = "<group>"; };
 		283272D31C92589400179CF9 /* BranchingOut-iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BranchingOut-iOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		283272D61C9260F700179CF9 /* MDCGalleryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDCGalleryCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -50,7 +43,12 @@
 		283272E71CAC8C1D00179CF9 /* MDCGalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDCGalleryViewController.swift; sourceTree = "<group>"; };
 		283272E91CADCAD000179CF9 /* MDCPopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDCPopupViewController.swift; sourceTree = "<group>"; };
 		4CF35EEC4305F9ED2C81F20C /* libPods-BranchingOut-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BranchingOut-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		650C966E1C9259DE006C952A /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		71078D493F3F8685D6C5A2EA /* Pods-BranchingOut-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BranchingOut-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BranchingOut-iOS/Pods-BranchingOut-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		7F06D87A1C9258AF00FA3E13 /* MDC.NearbyTrees.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MDC.NearbyTrees.storyboard; sourceTree = "<group>"; };
+		7F06D87C1C9259F700FA3E13 /* BranchingOut-iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BranchingOut-iOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		7F06D87F1C925A4A00FA3E13 /* MDCNearbyTreesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDCNearbyTreesViewController.swift; sourceTree = "<group>"; };
+		7FB4E2A11CAE0CF6003A94AA /* NearbyTreesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyTreesTableViewCell.swift; sourceTree = "<group>"; };
 		B4E3454791EC011D38AB27BF /* Pods-BranchingOut-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BranchingOut-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-BranchingOut-iOS/Pods-BranchingOut-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,7 +94,6 @@
 		280E63B51C8922EE006348C6 /* BranchingOut-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				7F06D8811C92657200FA3E13 /* AppDelegate.swift */,
 				7FB4E2A11CAE0CF6003A94AA /* NearbyTreesTableViewCell.swift */,
 				7F06D87F1C925A4A00FA3E13 /* MDCNearbyTreesViewController.swift */,
 				7F06D87A1C9258AF00FA3E13 /* MDC.NearbyTrees.storyboard */,
@@ -258,7 +255,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F06D8821C92657200FA3E13 /* AppDelegate.swift in Sources */,
 				7F06D8801C925A4A00FA3E13 /* MDCNearbyTreesViewController.swift in Sources */,
 				7FB4E2A21CAE0CF6003A94AA /* NearbyTreesTableViewCell.swift in Sources */,
 				283272E81CAC8C1D00179CF9 /* MDCGalleryViewController.swift in Sources */,
