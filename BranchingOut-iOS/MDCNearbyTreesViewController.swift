@@ -11,20 +11,30 @@ import UIKit
 
 class MDCNearbyTreesViewController: UITableViewController{
     
+    // Temporary array, delete when titles are available
     let tempArray: [String] = ["John Cena", "John Cena", "John Cena", "John Cena", "John Cena", "John Cena", "John Cena", "John Cena", "John Cena"]
     
+    // Finish when parse server is available
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         // TODO: add link to a TreeDetailViewController
     }
     
+    // Creates each cell for the TreesTableView
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        // dequeue prototype cell
         let treeCell = tableView.dequeueReusableCellWithIdentifier("nearbyTreeCell")!
-        let treeText =  tempArray[indexPath.row]
-        let description =
-        treeCell.textLabel?.text = treeText
+        
+        // set the tree title
+        let treeTitle =  tempArray[indexPath.row]
+        treeCell.textLabel?.text = treeTitle
+        
+        // set the tree image
         let treeImage = UIImage(named: "tempPicture")
-        let nearbyTreeDistance = 5.5
         treeCell.imageView?.image = treeImage
+        
+        // set the tree distance
+        let nearbyTreeDistance = 5.5
         treeCell.detailTextLabel?.text = "\(nearbyTreeDistance) miles away"
         
 //        let treeCell: NearbyTreesTableViewCell = tableView.dequeueReusableCellWithIdentifier("MDCnearbyTreeCell")! as! NearbyTreesTableViewCell
@@ -36,6 +46,7 @@ class MDCNearbyTreesViewController: UITableViewController{
         return treeCell
     }
     
+    // number of rows for the tableView, should be specified by the number of trees to display in the K-State area
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tempArray.count
     }
