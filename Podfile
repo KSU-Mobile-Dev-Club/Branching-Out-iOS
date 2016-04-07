@@ -4,6 +4,6 @@
 # use_frameworks!
 
 target 'BranchingOut-iOS' do
-
+pod 'CNPPopupController'
 end
 
