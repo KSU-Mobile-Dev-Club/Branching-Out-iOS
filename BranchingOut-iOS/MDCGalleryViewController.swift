@@ -152,7 +152,6 @@ class MDCGalleryViewController: UIViewController, UICollectionViewDataSource, UI
     func loadTreeDataForCollectionView(collectionView: UICollectionView!) {
         var trees: [MDCTree]! = []
         let query  = PFQuery(className: "trees")
-        query.limit = 5
         query.findObjectsInBackgroundWithBlock { (object: [PFObject]?, error: NSError?) -> Void in
             for item: PFObject in object! {
                 trees?.append(self.makeTreeObjects(item))
@@ -165,9 +164,11 @@ class MDCGalleryViewController: UIViewController, UICollectionViewDataSource, UI
     func makeTreeObjects(parseObject: PFObject) -> MDCTree {
         let myTree = MDCTree()
         myTree.commonName = parseObject["common"] as? String
-        myTree.scientificName = parseObject["scientificName"] as? String
+        myTree.scientificName = parseObject["scientific"] as? String
         myTree.treeID = parseObject["treeId"] as? String
-        myTree.objectID = parseObject["objectId"] as? String
+        myTree.objectID = parseObject.objectId
+        myTree.wikipedia = parseObject["wiki"] as? String
+        myTree.image = UIImage(named: "img1.jpg")
         
         return myTree
     }
