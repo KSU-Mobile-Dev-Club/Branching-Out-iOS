@@ -10,6 +10,7 @@
 		280E63BC1C8922EE006348C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 280E63BA1C8922EE006348C6 /* Main.storyboard */; };
 		280E63BE1C8922EE006348C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 280E63BD1C8922EE006348C6 /* Assets.xcassets */; };
 		280E63C11C8922EE006348C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 280E63BF1C8922EE006348C6 /* LaunchScreen.storyboard */; };
+		650C966F1C9259DE006C952A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 650C966E1C9259DE006C952A /* Home.storyboard */; };
 		283272D21C92561100179CF9 /* Gallery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 283272D11C92561100179CF9 /* Gallery.storyboard */; };
 		283272D71C9260F700179CF9 /* MDCGalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283272D61C9260F700179CF9 /* MDCGalleryCollectionViewCell.swift */; };
 		283272DB1CAC832900179CF9 /* MDCAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283272DA1CAC832900179CF9 /* MDCAppDelegate.swift */; };
@@ -28,6 +29,7 @@
 		280E63BD1C8922EE006348C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		280E63C01C8922EE006348C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		280E63C21C8922EE006348C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		650C966E1C9259DE006C952A /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		283272D11C92561100179CF9 /* Gallery.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Gallery.storyboard; sourceTree = "<group>"; };
 		283272D31C92589400179CF9 /* BranchingOut-iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BranchingOut-iOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		283272D61C9260F700179CF9 /* MDCGalleryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDCGalleryCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				283272DF1CAC845500179CF9 /* img4.jpg */,
 				280E63BF1C8922EE006348C6 /* LaunchScreen.storyboard */,
 				280E63C21C8922EE006348C6 /* Info.plist */,
+				650C966E1C9259DE006C952A /* Home.storyboard */,
 				283272E71CAC8C1D00179CF9 /* MDCGalleryViewController.swift */,
 				283272D61C9260F700179CF9 /* MDCGalleryCollectionViewCell.swift */,
 				283272E91CADCAD000179CF9 /* MDCPopupViewController.swift */,
@@ -181,6 +184,7 @@
 				283272E21CAC845500179CF9 /* img3.jpg in Resources */,
 				283272E11CAC845500179CF9 /* img2.jpg in Resources */,
 				280E63BC1C8922EE006348C6 /* Main.storyboard in Resources */,
+				650C966F1C9259DE006C952A /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
