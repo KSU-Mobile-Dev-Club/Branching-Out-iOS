@@ -259,8 +259,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				28D8137D1CB5CCAF00556B97 /* MDCTree.swift in Sources */,
-				7F06D8801C925A4A00FA3E13 /* MDCNearbyTreesViewController.swift in Sources */,
-				7FB4E2A21CAE0CF6003A94AA /* NearbyTreesTableViewCell.swift in Sources */,
 				283272E81CAC8C1D00179CF9 /* MDCGalleryViewController.swift in Sources */,
 				283272D71C9260F700179CF9 /* MDCGalleryCollectionViewCell.swift in Sources */,
 				283272EA1CADCAD000179CF9 /* MDCPopupViewController.swift in Sources */,
