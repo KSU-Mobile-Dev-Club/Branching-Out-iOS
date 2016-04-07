@@ -19,6 +19,7 @@
 		283272E31CAC845500179CF9 /* img4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 283272DF1CAC845500179CF9 /* img4.jpg */; };
 		283272E81CAC8C1D00179CF9 /* MDCGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283272E71CAC8C1D00179CF9 /* MDCGalleryViewController.swift */; };
 		283272EA1CADCAD000179CF9 /* MDCPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283272E91CADCAD000179CF9 /* MDCPopupViewController.swift */; };
+		28D8137D1CB5CCAF00556B97 /* MDCTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D8137C1CB5CCAF00556B97 /* MDCTree.swift */; };
 		E6D61218A8337F7106F0A0BF /* libPods-BranchingOut-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CF35EEC4305F9ED2C81F20C /* libPods-BranchingOut-iOS.a */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		283272DF1CAC845500179CF9 /* img4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img4.jpg; sourceTree = "<group>"; };
 		283272E71CAC8C1D00179CF9 /* MDCGalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDCGalleryViewController.swift; sourceTree = "<group>"; };
 		283272E91CADCAD000179CF9 /* MDCPopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDCPopupViewController.swift; sourceTree = "<group>"; };
+		28D8137C1CB5CCAF00556B97 /* MDCTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDCTree.swift; sourceTree = "<group>"; };
 		4CF35EEC4305F9ED2C81F20C /* libPods-BranchingOut-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BranchingOut-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		71078D493F3F8685D6C5A2EA /* Pods-BranchingOut-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BranchingOut-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BranchingOut-iOS/Pods-BranchingOut-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		B4E3454791EC011D38AB27BF /* Pods-BranchingOut-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BranchingOut-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-BranchingOut-iOS/Pods-BranchingOut-iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				280E63C21C8922EE006348C6 /* Info.plist */,
 				283272E71CAC8C1D00179CF9 /* MDCGalleryViewController.swift */,
 				283272D61C9260F700179CF9 /* MDCGalleryCollectionViewCell.swift */,
+				28D8137C1CB5CCAF00556B97 /* MDCTree.swift */,
 				283272E91CADCAD000179CF9 /* MDCPopupViewController.swift */,
 				283272D31C92589400179CF9 /* BranchingOut-iOS-Bridging-Header.h */,
 				283272DA1CAC832900179CF9 /* MDCAppDelegate.swift */,
@@ -239,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28D8137D1CB5CCAF00556B97 /* MDCTree.swift in Sources */,
 				283272E81CAC8C1D00179CF9 /* MDCGalleryViewController.swift in Sources */,
 				283272D71C9260F700179CF9 /* MDCGalleryCollectionViewCell.swift in Sources */,
 				283272EA1CADCAD000179CF9 /* MDCPopupViewController.swift in Sources */,

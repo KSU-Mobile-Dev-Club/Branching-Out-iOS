@@ -5,5 +5,6 @@
 
 target 'BranchingOut-iOS' do
 pod 'CNPPopupController'
+pod 'Parse'
 end
 

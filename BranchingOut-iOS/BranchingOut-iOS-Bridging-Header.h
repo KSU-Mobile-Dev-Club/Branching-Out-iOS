@@ -3,3 +3,4 @@
 //
 
 #import "CNPPopupController/CNPPopupController.h"
+#import "Parse/Parse.h"

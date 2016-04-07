@@ -17,6 +17,7 @@ class MDCGalleryViewController: UIViewController, UICollectionViewDataSource, UI
     var biggerFrame = CGSize(width: 300, height: 500)
     var selectedRow = 0
     var popupController:CNPPopupController = CNPPopupController()
+    var treeArray: [MDCTree]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +25,16 @@ class MDCGalleryViewController: UIViewController, UICollectionViewDataSource, UI
         // Register cell classes
         setupCollectionView()
         
-        // Load the images
-        loadGallery()
+//        // Load the images
+//        loadGallery()
+        
+        let testObject = PFObject(className: "TestObject")
+        testObject["foo"] = "bar"
+        testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+            print("Object has been saved.")
+        }
+        
+        self.treeArray = loadTreeDataForCollectionView(myCollectionView)
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,7 +63,7 @@ class MDCGalleryViewController: UIViewController, UICollectionViewDataSource, UI
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return imageArray.count
+        return treeArray.count
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
@@ -69,8 +78,12 @@ class MDCGalleryViewController: UIViewController, UICollectionViewDataSource, UI
         let cell: MDCGalleryCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! MDCGalleryCollectionViewCell
         
         // Configure the cell
-        cell.imageName = imageArray[indexPath.row] as! String
-        cell.updateCell()
+//        cell.imageName = imageArray[indexPath.row] as! String
+//        cell.updateCell()
+//        
+        // Parse
+        cell.imageName = treeArray[indexPath.row].commonName
+        cell.parseTest()
         
         return cell
     }
@@ -93,6 +106,7 @@ class MDCGalleryViewController: UIViewController, UICollectionViewDataSource, UI
     // MARK: Prep gallery
     func loadGallery() {
         imageArray = ["img1.jpg","img2.jpg","img3.jpg", "img4.jpg", "img2.jpg","img3.jpg", "img4.jpg", "img1.jpg"]
+                
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -138,6 +152,31 @@ class MDCGalleryViewController: UIViewController, UICollectionViewDataSource, UI
         self.popupController.theme = CNPPopupTheme.defaultTheme()
         self.popupController.theme.popupStyle = popupStyle
         self.popupController.presentPopupControllerAnimated(true)
+    }
+    
+    // MARK: Load data from Parse
+    func loadTreeDataForCollectionView(collectionView: UICollectionView!) -> [MDCTree] {
+        var trees: [MDCTree]! = []
+        let query  = PFQuery(className: "trees")
+        query.limit = 5
+        query.findObjectsInBackgroundWithBlock { (object: [PFObject]?, error: NSError?) -> Void in
+            for item: PFObject in object! {
+                trees?.append(self.makeTreeObjects(item))
+            }
+            collectionView.reloadData()
+        }
+        
+        return trees
+    }
+    
+    func makeTreeObjects(parseObject: PFObject) -> MDCTree {
+        let myTree = MDCTree()
+        myTree.commonName = parseObject["common"] as? String
+        myTree.scientificName = parseObject["scientificName"] as? String
+        myTree.treeID = parseObject["treeId"] as? String
+        myTree.objectID = parseObject["objectId"] as? String
+        
+        return myTree
     }
 
 
