@@ -133,7 +133,7 @@ class MDCGalleryViewController: UIViewController, UICollectionViewDataSource, UI
         button.backgroundColor = UIColor.init(colorLiteralRed: 0.46, green: 0.8, blue: 1.0, alpha: 1.0)
         
         button.layer.cornerRadius = 4;
-        button.selectionHandler = { (CNPPopupButton button) -> Void in
+        button.selectionHandler = { (button) -> Void in
             self.popupController.dismissPopupControllerAnimated(true)
         }
         

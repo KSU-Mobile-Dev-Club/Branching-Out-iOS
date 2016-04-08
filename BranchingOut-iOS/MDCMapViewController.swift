@@ -14,7 +14,7 @@ class MDCMapViewController: UIViewController, MKMapViewDelegate, CLLocationManag
 
     @IBOutlet var mapView: OCMapView!
     let locationManager = CLLocationManager()
-    var treeLocations: [PFObject]!
+    var treeLocations: [PFObject]! = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +53,7 @@ class MDCMapViewController: UIViewController, MKMapViewDelegate, CLLocationManag
     func findTreesNearLocation(location: CLLocation, completion:(locations: [PFObject]) -> Void) {
         let geopoint = PFGeoPoint(location: location)
         var objectLocations: [PFObject]! = []
-        PFQuery(className: "trees").whereKey("coord", nearGeoPoint: geopoint, withinMiles: 1.0)
+        PFQuery(className: "trees").whereKey("cord", nearGeoPoint: geopoint, withinMiles: 1.0)
             .findObjectsInBackgroundWithBlock { (results: [PFObject]?, error: NSError?) -> Void in
                 for location: PFObject in results! {
                 objectLocations.append(location)
@@ -93,9 +93,13 @@ class MDCMapViewController: UIViewController, MKMapViewDelegate, CLLocationManag
         let annotationsToAdd: NSMutableSet = NSMutableSet()
         findTreesNearLocation(treeLocation) { (locations) -> Void in
             for treeObject: PFObject in locations {
-                let location = treeObject["coord"] as! CLLocation
+                let descLocation = treeObject["cord"] as! PFGeoPoint
+                let latitude: CLLocationDegrees = descLocation.latitude
+                let longitude: CLLocationDegrees = descLocation.longitude
+                let location: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+
                 let treeName = treeObject["common"] as! String
-                let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+                let center = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
                 let annotation: OCMapViewSampleHelpAnnotation = OCMapViewSampleHelpAnnotation(coordinate: center)
                 annotationsToAdd.addObject(annotation)
                 annotation.groupTag = treeName
@@ -106,11 +110,13 @@ class MDCMapViewController: UIViewController, MKMapViewDelegate, CLLocationManag
         
     }
     
+    // I get errors here
+    
     func updateOverlays() {
         self.mapView.removeOverlays(self.mapView.overlays)
-        let annotationArray : [OCAnnotation]! = self.mapView.displayedAnnotations as! [OCAnnotation]!
-        for annotation: OCAnnotation in annotationArray {
-            if (annotation.isKindOfClass(OCAnnotation)) {
+        let annotationArray : [OCMapViewSampleHelpAnnotation]! = self.mapView.displayedAnnotations as! [OCMapViewSampleHelpAnnotation]!
+        for annotation: OCMapViewSampleHelpAnnotation in annotationArray {
+            if (annotation.isKindOfClass(OCMapViewSampleHelpAnnotation)) {
                 // static circle size of cluster
                 var clusterRadius: CLLocationDistance = self.mapView.region.span.longitudeDelta * self.mapView.clusterSize * 111000 / 2.0
                 clusterRadius = clusterRadius * cos(annotation.coordinate.latitude * M_PI / 180.0)

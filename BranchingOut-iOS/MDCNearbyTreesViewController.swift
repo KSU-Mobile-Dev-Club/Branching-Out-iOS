@@ -11,8 +11,11 @@ import UIKit
 
 class MDCNearbyTreesViewController: UITableViewController{
     
+    var treeArray: [MDCTree]!  = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadTreeDataForTableView(self.tableView)
        
     }
     
@@ -21,8 +24,6 @@ class MDCNearbyTreesViewController: UITableViewController{
         // Dispose of any resources that can be recreated.
     }
     
-    // Temporary array, delete when titles are available
-    let tempArray: [String] = ["John Cena", "John Cena", "John Cena", "John Cena", "John Cena", "John Cena", "John Cena", "John Cena", "John Cena"]
     
     // Finish when parse server is available
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -36,15 +37,15 @@ class MDCNearbyTreesViewController: UITableViewController{
         let treeCell = tableView.dequeueReusableCellWithIdentifier("nearbyTreeCell")!
         
         // set the tree title
-        let treeTitle =  tempArray[indexPath.row]
-        treeCell.textLabel?.text = treeTitle
+        let tree =  treeArray[indexPath.row] as MDCTree
+        treeCell.textLabel?.text = tree.commonName
         
         // set the tree image
         let treeImage = UIImage(named: "tempPicture")
         treeCell.imageView?.image = treeImage
         
         // set the tree distance
-        let nearbyTreeDistance = 5.5
+        let nearbyTreeDistance = 1.5
         treeCell.detailTextLabel?.text = "\(nearbyTreeDistance) miles away"
         
 //        let treeCell: NearbyTreesTableViewCell = tableView.dequeueReusableCellWithIdentifier("MDCnearbyTreeCell")! as! NearbyTreesTableViewCell
@@ -56,8 +57,32 @@ class MDCNearbyTreesViewController: UITableViewController{
         return treeCell
     }
     
+    func loadTreeDataForTableView(atableView: UITableView!) {
+        var trees: [MDCTree]! = []
+        let query  = PFQuery(className: "trees")
+        query.findObjectsInBackgroundWithBlock { (object: [PFObject]?, error: NSError?) -> Void in
+            for item: PFObject in object! {
+                trees?.append(self.makeTreeObjects(item))
+            }
+            self.treeArray = trees
+            atableView.reloadData()
+        }
+    }
+    
+    func makeTreeObjects(parseObject: PFObject) -> MDCTree {
+        let myTree = MDCTree()
+        myTree.commonName = parseObject["common"] as? String
+        myTree.scientificName = parseObject["scientific"] as? String
+        myTree.treeID = parseObject["treeId"] as? String
+        myTree.objectID = parseObject.objectId
+        myTree.wikipedia = parseObject["wiki"] as? String
+        myTree.image = UIImage(named: "img1.jpg")
+        
+        return myTree
+    }
+    
     // number of rows for the tableView, should be specified by the number of trees to display in the K-State area
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tempArray.count
+        return treeArray.count
     }
 }
