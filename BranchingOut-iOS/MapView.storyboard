@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map-->
+        <scene sceneID="rP3-Fg-K4h">
+            <objects>
+                <viewController title="Map" id="FiI-IE-XoP" customClass="MDCMapViewController" customModule="BranchingOut_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kfp-Hc-jb8"/>
+                        <viewControllerLayoutGuide type="bottom" id="Oka-fp-jDH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uRe-eA-TQu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Rcg-21-gHE" customClass="OCMapView">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <connections>
+                                    <outlet property="delegate" destination="FiI-IE-XoP" id="oUR-ha-wOx"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Oka-fp-jDH" firstAttribute="top" secondItem="Rcg-21-gHE" secondAttribute="bottom" id="4gB-SW-Ywz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Rcg-21-gHE" secondAttribute="trailing" constant="-20" id="Bbv-3Q-x9S"/>
+                            <constraint firstItem="Rcg-21-gHE" firstAttribute="leading" secondItem="uRe-eA-TQu" secondAttribute="leadingMargin" constant="-20" id="Yoe-Yz-eSe"/>
+                            <constraint firstItem="Rcg-21-gHE" firstAttribute="top" secondItem="kfp-Hc-jb8" secondAttribute="bottom" id="ztZ-ei-oUE"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" image="paper-map-7" id="avW-Id-8aR"/>
+                    <navigationItem key="navigationItem" title="Interactive Map" id="kbD-mm-mU5"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="mapView" destination="Rcg-21-gHE" id="KRT-fs-xyu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jY7-O7-Vh7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1271" y="367"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="eBS-l3-cNo">
+            <objects>
+                <navigationController storyboardIdentifier="mapView" automaticallyAdjustsScrollViewInsets="NO" id="i47-4b-lfh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Map" image="paper-map-7" id="neV-8C-dkr"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gbp-DV-hRl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="FiI-IE-XoP" kind="relationship" relationship="rootViewController" id="sp4-Ux-Bgg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pNu-KB-G6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="459" y="367"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="paper-map-7" width="30" height="30"/>
+    </resources>
+</document>

@@ -1,25 +1,80 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mCM-0L-ieZ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Tab Bar Controller-->
+        <scene sceneID="hdh-5W-tbg">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="mCM-0L-ieZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="cgY-r8-HUd">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="UZT-tl-G3t" kind="relationship" relationship="viewControllers" id="I2d-ao-ZBK"/>
+                        <segue destination="gVQ-f6-zpS" kind="relationship" relationship="viewControllers" id="o8e-6P-4nU"/>
+                        <segue destination="12S-Of-ghY" kind="relationship" relationship="viewControllers" id="ibl-fQ-w6D"/>
+                        <segue destination="xkG-0w-t3W" kind="relationship" relationship="viewControllers" id="fjE-I8-7WA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xbb-Kt-2cS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="405" y="388"/>
+        </scene>
+        <!--homeView-->
+        <scene sceneID="cgL-gx-Lxb">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="homeView" storyboardName="Home" bundleIdentifier="MDC.BrancchingOut-iOS" referencedIdentifier="homeView" id="UZT-tl-G3t" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="home-7" selectedImage="home-7" id="ss1-ma-0kh">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="home-7"/>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="home-7"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YDI-v0-IwO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1014.5" y="272"/>
+        </scene>
+        <!--nearbyView-->
+        <scene sceneID="3gU-d2-xry">
+            <objects>
+                <viewControllerPlaceholder storyboardName="NearbyTrees" bundleIdentifier="MDC.BrancchingOut-iOS" referencedIdentifier="nearbyView" id="gVQ-f6-zpS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" image="pin-map-7" id="r1y-F4-msA"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jog-fg-WOo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1014.5" y="335"/>
+        </scene>
+        <!--galleryView-->
+        <scene sceneID="Xc5-dc-twG">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Gallery" bundleIdentifier="MDC.BrancchingOut-iOS" referencedIdentifier="galleryView" id="12S-Of-ghY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="photos-simple-7" id="DZl-Fk-DLd"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y8Q-WV-npj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1014.5" y="443"/>
+        </scene>
+        <!--mapView-->
+        <scene sceneID="No2-bp-VY9">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MapView" referencedIdentifier="mapView" id="xkG-0w-t3W" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="paper-map-7" id="LXS-Zc-Z1y"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="btu-Pd-JcS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1044.5" y="525"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="home-7" width="30" height="30"/>
+        <image name="paper-map-7" width="30" height="30"/>
+        <image name="photos-simple-7" width="30" height="30"/>
+        <image name="pin-map-7" width="30" height="30"/>
+    </resources>
 </document>
