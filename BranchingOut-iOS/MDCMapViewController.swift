@@ -114,8 +114,14 @@ class MDCMapViewController: UIViewController, MKMapViewDelegate, CLLocationManag
     
     func updateOverlays() {
         self.mapView.removeOverlays(self.mapView.overlays)
-        let annotationArray : [OCMapViewSampleHelpAnnotation]! = self.mapView.displayedAnnotations as! [OCMapViewSampleHelpAnnotation]!
-        for annotation: OCMapViewSampleHelpAnnotation in annotationArray {
+        let annotationArray : [MKAnnotation]! = self.mapView.displayedAnnotations as! [MKAnnotation]!
+        
+        for annotation: MKAnnotation in annotationArray {
+            if (annotation.isKindOfClass(MKUserLocation)){
+                //this is user location pin which is not a OCMapViewSampleHelpAnnotation
+                
+            }
+            
             if (annotation.isKindOfClass(OCMapViewSampleHelpAnnotation)) {
                 // static circle size of cluster
                 var clusterRadius: CLLocationDistance = self.mapView.region.span.longitudeDelta * self.mapView.clusterSize * 111000 / 2.0
