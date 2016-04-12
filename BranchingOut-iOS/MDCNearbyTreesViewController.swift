@@ -41,7 +41,8 @@ class MDCNearbyTreesViewController: UITableViewController{
         treeCell.textLabel?.text = tree.commonName
         
         // set the tree image
-        let treeImage = UIImage(named: "tempPicture")
+        //let treeImage = UIImage(named: "tempPicture")
+        let treeImage = tree.image
         treeCell.imageView?.image = treeImage
         
         // set the tree distance
@@ -76,7 +77,16 @@ class MDCNearbyTreesViewController: UITableViewController{
         myTree.treeID = parseObject["treeId"] as? String
         myTree.objectID = parseObject.objectId
         myTree.wikipedia = parseObject["wiki"] as? String
-        myTree.image = UIImage(named: "img1.jpg")
+        //myTree.image = UIImage(named: "img1.jpg")
+        
+        // set the picture
+        let userPicture = parseObject["photo"] as? String
+        
+        let url = NSURL(string: userPicture!)
+        let data = NSData(contentsOfURL:url!)
+        if (data != nil) {
+            myTree.image = UIImage(data:data!)
+        }
         
         return myTree
     }
