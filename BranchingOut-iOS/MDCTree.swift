@@ -17,6 +17,7 @@ class MDCTree {
     var location: PFGeoPoint?
     var wikipedia: String?
     var image: UIImage?
+    var imageURL: String?
     
     init () {
         

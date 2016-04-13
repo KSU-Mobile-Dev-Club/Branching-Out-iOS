@@ -7,5 +7,6 @@ target 'BranchingOut-iOS' do
 pod 'CNPPopupController'
 pod 'Parse'
 pod 'OCMapView'
+pod 'DLImageLoader'
 end
 

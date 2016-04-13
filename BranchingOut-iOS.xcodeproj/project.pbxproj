@@ -1,449 +1,1125 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		280E63BC1C8922EE006348C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 280E63BA1C8922EE006348C6 /* Main.storyboard */; };
-		280E63BE1C8922EE006348C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 280E63BD1C8922EE006348C6 /* Assets.xcassets */; };
-		280E63C11C8922EE006348C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 280E63BF1C8922EE006348C6 /* LaunchScreen.storyboard */; };
-		283272D21C92561100179CF9 /* Gallery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 283272D11C92561100179CF9 /* Gallery.storyboard */; };
-		283272D71C9260F700179CF9 /* MDCGalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283272D61C9260F700179CF9 /* MDCGalleryCollectionViewCell.swift */; };
-		283272DB1CAC832900179CF9 /* MDCAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283272DA1CAC832900179CF9 /* MDCAppDelegate.swift */; };
-		283272E01CAC845500179CF9 /* img1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 283272DC1CAC845500179CF9 /* img1.jpg */; };
-		283272E11CAC845500179CF9 /* img2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 283272DD1CAC845500179CF9 /* img2.jpg */; };
-		283272E21CAC845500179CF9 /* img3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 283272DE1CAC845500179CF9 /* img3.jpg */; };
-		283272E31CAC845500179CF9 /* img4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 283272DF1CAC845500179CF9 /* img4.jpg */; };
-		283272E81CAC8C1D00179CF9 /* MDCGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283272E71CAC8C1D00179CF9 /* MDCGalleryViewController.swift */; };
-		283272EA1CADCAD000179CF9 /* MDCPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283272E91CADCAD000179CF9 /* MDCPopupViewController.swift */; };
-		28D8137D1CB5CCAF00556B97 /* MDCTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D8137C1CB5CCAF00556B97 /* MDCTree.swift */; };
-		28D8137E1CB6B18B00556B97 /* MDCNearbyTreesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F06D87F1C925A4A00FA3E13 /* MDCNearbyTreesViewController.swift */; };
-		28D8137F1CB6B18E00556B97 /* NearbyTreesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB4E2A11CAE0CF6003A94AA /* NearbyTreesTableViewCell.swift */; };
-		28D813811CB6B28F00556B97 /* Gardens_Fotor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 28D813801CB6B28F00556B97 /* Gardens_Fotor.jpg */; };
-		28D813831CB6B56F00556B97 /* MapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28D813821CB6B56F00556B97 /* MapView.storyboard */; };
-		28D813851CB6B82E00556B97 /* MDCHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D813841CB6B82E00556B97 /* MDCHomeViewController.swift */; };
-		28D813871CB6B87B00556B97 /* MDCMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D813861CB6B87B00556B97 /* MDCMapViewController.swift */; };
-		28D8138C1CB7187400556B97 /* OCSingleAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D8138B1CB7187400556B97 /* OCSingleAnnotation.m */; };
-		650C966F1C9259DE006C952A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 650C966E1C9259DE006C952A /* Home.storyboard */; };
-		7F06D87B1C9258AF00FA3E13 /* NearbyTrees.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F06D87A1C9258AF00FA3E13 /* NearbyTrees.storyboard */; };
-		E6D61218A8337F7106F0A0BF /* libPods-BranchingOut-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CF35EEC4305F9ED2C81F20C /* libPods-BranchingOut-iOS.a */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXFileReference section */
-		280E63B31C8922EE006348C6 /* BranchingOut-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BranchingOut-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		280E63BB1C8922EE006348C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		280E63BD1C8922EE006348C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		280E63C01C8922EE006348C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		280E63C21C8922EE006348C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		283272D11C92561100179CF9 /* Gallery.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Gallery.storyboard; sourceTree = "<group>"; };
-		283272D31C92589400179CF9 /* BranchingOut-iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BranchingOut-iOS-Bridging-Header.h"; sourceTree = "<group>"; };
-		283272D61C9260F700179CF9 /* MDCGalleryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDCGalleryCollectionViewCell.swift; sourceTree = "<group>"; };
-		283272DA1CAC832900179CF9 /* MDCAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDCAppDelegate.swift; sourceTree = "<group>"; };
-		283272DC1CAC845500179CF9 /* img1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img1.jpg; sourceTree = "<group>"; };
-		283272DD1CAC845500179CF9 /* img2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img2.jpg; sourceTree = "<group>"; };
-		283272DE1CAC845500179CF9 /* img3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img3.jpg; sourceTree = "<group>"; };
-		283272DF1CAC845500179CF9 /* img4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img4.jpg; sourceTree = "<group>"; };
-		283272E71CAC8C1D00179CF9 /* MDCGalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDCGalleryViewController.swift; sourceTree = "<group>"; };
-		283272E91CADCAD000179CF9 /* MDCPopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDCPopupViewController.swift; sourceTree = "<group>"; };
-		28D8137C1CB5CCAF00556B97 /* MDCTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDCTree.swift; sourceTree = "<group>"; };
-		28D813801CB6B28F00556B97 /* Gardens_Fotor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Gardens_Fotor.jpg; sourceTree = "<group>"; };
-		28D813821CB6B56F00556B97 /* MapView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MapView.storyboard; sourceTree = "<group>"; };
-		28D813841CB6B82E00556B97 /* MDCHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDCHomeViewController.swift; sourceTree = "<group>"; };
-		28D813861CB6B87B00556B97 /* MDCMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDCMapViewController.swift; sourceTree = "<group>"; };
-		28D8138A1CB7187400556B97 /* OCSingleAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCSingleAnnotation.h; sourceTree = "<group>"; };
-		28D8138B1CB7187400556B97 /* OCSingleAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCSingleAnnotation.m; sourceTree = "<group>"; };
-		4CF35EEC4305F9ED2C81F20C /* libPods-BranchingOut-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BranchingOut-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		650C966E1C9259DE006C952A /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		71078D493F3F8685D6C5A2EA /* Pods-BranchingOut-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BranchingOut-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BranchingOut-iOS/Pods-BranchingOut-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		7F06D87A1C9258AF00FA3E13 /* NearbyTrees.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NearbyTrees.storyboard; sourceTree = "<group>"; };
-		7F06D87C1C9259F700FA3E13 /* BranchingOut-iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BranchingOut-iOS-Bridging-Header.h"; sourceTree = "<group>"; };
-		7F06D87F1C925A4A00FA3E13 /* MDCNearbyTreesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDCNearbyTreesViewController.swift; sourceTree = "<group>"; };
-		7FB4E2A11CAE0CF6003A94AA /* NearbyTreesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyTreesTableViewCell.swift; sourceTree = "<group>"; };
-		B4E3454791EC011D38AB27BF /* Pods-BranchingOut-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BranchingOut-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-BranchingOut-iOS/Pods-BranchingOut-iOS.release.xcconfig"; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		280E63B01C8922EE006348C6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E6D61218A8337F7106F0A0BF /* libPods-BranchingOut-iOS.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		1D3F3CE1C4A3AEB60B91734C /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				71078D493F3F8685D6C5A2EA /* Pods-BranchingOut-iOS.debug.xcconfig */,
-				B4E3454791EC011D38AB27BF /* Pods-BranchingOut-iOS.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		280E63AA1C8922EE006348C6 = {
-			isa = PBXGroup;
-			children = (
-				280E63B51C8922EE006348C6 /* BranchingOut-iOS */,
-				280E63B41C8922EE006348C6 /* Products */,
-				1D3F3CE1C4A3AEB60B91734C /* Pods */,
-				D0756E0EEDB99A68FE681413 /* Frameworks */,
-			);
-			sourceTree = "<group>";
-		};
-		280E63B41C8922EE006348C6 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				280E63B31C8922EE006348C6 /* BranchingOut-iOS.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		280E63B51C8922EE006348C6 /* BranchingOut-iOS */ = {
-			isa = PBXGroup;
-			children = (
-				7FB4E2A11CAE0CF6003A94AA /* NearbyTreesTableViewCell.swift */,
-				7F06D87F1C925A4A00FA3E13 /* MDCNearbyTreesViewController.swift */,
-				7F06D87A1C9258AF00FA3E13 /* NearbyTrees.storyboard */,
-				280E63BA1C8922EE006348C6 /* Main.storyboard */,
-				28D813821CB6B56F00556B97 /* MapView.storyboard */,
-				283272D11C92561100179CF9 /* Gallery.storyboard */,
-				280E63BD1C8922EE006348C6 /* Assets.xcassets */,
-				28D813801CB6B28F00556B97 /* Gardens_Fotor.jpg */,
-				283272DC1CAC845500179CF9 /* img1.jpg */,
-				283272DD1CAC845500179CF9 /* img2.jpg */,
-				283272DE1CAC845500179CF9 /* img3.jpg */,
-				283272DF1CAC845500179CF9 /* img4.jpg */,
-				280E63BF1C8922EE006348C6 /* LaunchScreen.storyboard */,
-				28D8138A1CB7187400556B97 /* OCSingleAnnotation.h */,
-				28D8138B1CB7187400556B97 /* OCSingleAnnotation.m */,
-				280E63C21C8922EE006348C6 /* Info.plist */,
-				7F06D87C1C9259F700FA3E13 /* BranchingOut-iOS-Bridging-Header.h */,
-				650C966E1C9259DE006C952A /* Home.storyboard */,
-				283272E71CAC8C1D00179CF9 /* MDCGalleryViewController.swift */,
-				28D813861CB6B87B00556B97 /* MDCMapViewController.swift */,
-				283272D61C9260F700179CF9 /* MDCGalleryCollectionViewCell.swift */,
-				28D8137C1CB5CCAF00556B97 /* MDCTree.swift */,
-				28D813841CB6B82E00556B97 /* MDCHomeViewController.swift */,
-				283272E91CADCAD000179CF9 /* MDCPopupViewController.swift */,
-				283272D31C92589400179CF9 /* BranchingOut-iOS-Bridging-Header.h */,
-				283272DA1CAC832900179CF9 /* MDCAppDelegate.swift */,
-			);
-			path = "BranchingOut-iOS";
-			sourceTree = "<group>";
-		};
-		D0756E0EEDB99A68FE681413 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				4CF35EEC4305F9ED2C81F20C /* libPods-BranchingOut-iOS.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		280E63B21C8922EE006348C6 /* BranchingOut-iOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 280E63C51C8922EE006348C6 /* Build configuration list for PBXNativeTarget "BranchingOut-iOS" */;
-			buildPhases = (
-				4D0D0F2C4ACAE82121180367 /* Check Pods Manifest.lock */,
-				280E63AF1C8922EE006348C6 /* Sources */,
-				280E63B01C8922EE006348C6 /* Frameworks */,
-				280E63B11C8922EE006348C6 /* Resources */,
-				9B209DBD3CA72D36372804A8 /* Embed Pods Frameworks */,
-				DF2872FFE6D3287B9D6929BC /* Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "BranchingOut-iOS";
-			productName = "BranchingOut-iOS";
-			productReference = 280E63B31C8922EE006348C6 /* BranchingOut-iOS.app */;
-			productType = "com.apple.product-type.application";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		280E63AB1C8922EE006348C6 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				CLASSPREFIX = MDC;
-				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
-				ORGANIZATIONNAME = MDC;
-				TargetAttributes = {
-					280E63B21C8922EE006348C6 = {
-						CreatedOnToolsVersion = 7.2;
-					};
-				};
-			};
-			buildConfigurationList = 280E63AE1C8922EE006348C6 /* Build configuration list for PBXProject "BranchingOut-iOS" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = 280E63AA1C8922EE006348C6;
-			productRefGroup = 280E63B41C8922EE006348C6 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				280E63B21C8922EE006348C6 /* BranchingOut-iOS */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		280E63B11C8922EE006348C6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				283272E31CAC845500179CF9 /* img4.jpg in Resources */,
-				28D813811CB6B28F00556B97 /* Gardens_Fotor.jpg in Resources */,
-				28D813831CB6B56F00556B97 /* MapView.storyboard in Resources */,
-				280E63C11C8922EE006348C6 /* LaunchScreen.storyboard in Resources */,
-				283272E01CAC845500179CF9 /* img1.jpg in Resources */,
-				283272D21C92561100179CF9 /* Gallery.storyboard in Resources */,
-				280E63BE1C8922EE006348C6 /* Assets.xcassets in Resources */,
-				283272E21CAC845500179CF9 /* img3.jpg in Resources */,
-				283272E11CAC845500179CF9 /* img2.jpg in Resources */,
-				280E63BC1C8922EE006348C6 /* Main.storyboard in Resources */,
-				7F06D87B1C9258AF00FA3E13 /* NearbyTrees.storyboard in Resources */,
-				650C966F1C9259DE006C952A /* Home.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		4D0D0F2C4ACAE82121180367 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		9B209DBD3CA72D36372804A8 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BranchingOut-iOS/Pods-BranchingOut-iOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DF2872FFE6D3287B9D6929BC /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BranchingOut-iOS/Pods-BranchingOut-iOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		280E63AF1C8922EE006348C6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				28D8137E1CB6B18B00556B97 /* MDCNearbyTreesViewController.swift in Sources */,
-				28D8137D1CB5CCAF00556B97 /* MDCTree.swift in Sources */,
-				28D813851CB6B82E00556B97 /* MDCHomeViewController.swift in Sources */,
-				28D8138C1CB7187400556B97 /* OCSingleAnnotation.m in Sources */,
-				28D813871CB6B87B00556B97 /* MDCMapViewController.swift in Sources */,
-				28D8137F1CB6B18E00556B97 /* NearbyTreesTableViewCell.swift in Sources */,
-				283272E81CAC8C1D00179CF9 /* MDCGalleryViewController.swift in Sources */,
-				283272D71C9260F700179CF9 /* MDCGalleryCollectionViewCell.swift in Sources */,
-				283272EA1CADCAD000179CF9 /* MDCPopupViewController.swift in Sources */,
-				283272DB1CAC832900179CF9 /* MDCAppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		280E63BA1C8922EE006348C6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				280E63BB1C8922EE006348C6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		280E63BF1C8922EE006348C6 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				280E63C01C8922EE006348C6 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		280E63C31C8922EE006348C6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-			};
-			name = Debug;
-		};
-		280E63C41C8922EE006348C6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		280E63C61C8922EE006348C6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 71078D493F3F8685D6C5A2EA /* Pods-BranchingOut-iOS.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = "BranchingOut-iOS/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "MDC.BranchingOut-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "BranchingOut-iOS/BranchingOut-iOS-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-			};
-			name = Debug;
-		};
-		280E63C71C8922EE006348C6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B4E3454791EC011D38AB27BF /* Pods-BranchingOut-iOS.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = "BranchingOut-iOS/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "MDC.BranchingOut-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "BranchingOut-iOS/BranchingOut-iOS-Bridging-Header.h";
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		280E63AE1C8922EE006348C6 /* Build configuration list for PBXProject "BranchingOut-iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				280E63C31C8922EE006348C6 /* Debug */,
-				280E63C41C8922EE006348C6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		280E63C51C8922EE006348C6 /* Build configuration list for PBXNativeTarget "BranchingOut-iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				280E63C61C8922EE006348C6 /* Debug */,
-				280E63C71C8922EE006348C6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = 280E63AB1C8922EE006348C6 /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>1D3F3CE1C4A3AEB60B91734C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>71078D493F3F8685D6C5A2EA</string>
+				<string>B4E3454791EC011D38AB27BF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>280E63AA1C8922EE006348C6</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>280E63B51C8922EE006348C6</string>
+				<string>280E63B41C8922EE006348C6</string>
+				<string>1D3F3CE1C4A3AEB60B91734C</string>
+				<string>D0756E0EEDB99A68FE681413</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>280E63AB1C8922EE006348C6</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>CLASSPREFIX</key>
+				<string>MDC</string>
+				<key>LastSwiftUpdateCheck</key>
+				<string>0720</string>
+				<key>LastUpgradeCheck</key>
+				<string>0720</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>MDC</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>280E63B21C8922EE006348C6</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>7.2</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>280E63AE1C8922EE006348C6</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+			</array>
+			<key>mainGroup</key>
+			<string>280E63AA1C8922EE006348C6</string>
+			<key>productRefGroup</key>
+			<string>280E63B41C8922EE006348C6</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>280E63B21C8922EE006348C6</string>
+			</array>
+		</dict>
+		<key>280E63AE1C8922EE006348C6</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>280E63C31C8922EE006348C6</string>
+				<string>280E63C41C8922EE006348C6</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>280E63AF1C8922EE006348C6</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>28D8137E1CB6B18B00556B97</string>
+				<string>28D8137D1CB5CCAF00556B97</string>
+				<string>28D813851CB6B82E00556B97</string>
+				<string>28D8138C1CB7187400556B97</string>
+				<string>28D813871CB6B87B00556B97</string>
+				<string>28D8137F1CB6B18E00556B97</string>
+				<string>283272E81CAC8C1D00179CF9</string>
+				<string>283272D71C9260F700179CF9</string>
+				<string>283272EA1CADCAD000179CF9</string>
+				<string>283272DB1CAC832900179CF9</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>280E63B01C8922EE006348C6</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>A16E1ADA0109152A41930EDC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>280E63B11C8922EE006348C6</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>283272E31CAC845500179CF9</string>
+				<string>28D813811CB6B28F00556B97</string>
+				<string>28D813831CB6B56F00556B97</string>
+				<string>280E63C11C8922EE006348C6</string>
+				<string>283272E01CAC845500179CF9</string>
+				<string>283272D21C92561100179CF9</string>
+				<string>280E63BE1C8922EE006348C6</string>
+				<string>283272E21CAC845500179CF9</string>
+				<string>283272E11CAC845500179CF9</string>
+				<string>280E63BC1C8922EE006348C6</string>
+				<string>7F06D87B1C9258AF00FA3E13</string>
+				<string>650C966F1C9259DE006C952A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>280E63B21C8922EE006348C6</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>280E63C51C8922EE006348C6</string>
+			<key>buildPhases</key>
+			<array>
+				<string>4D0D0F2C4ACAE82121180367</string>
+				<string>280E63AF1C8922EE006348C6</string>
+				<string>280E63B01C8922EE006348C6</string>
+				<string>280E63B11C8922EE006348C6</string>
+				<string>9B209DBD3CA72D36372804A8</string>
+				<string>DF2872FFE6D3287B9D6929BC</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>BranchingOut-iOS</string>
+			<key>productName</key>
+			<string>BranchingOut-iOS</string>
+			<key>productReference</key>
+			<string>280E63B31C8922EE006348C6</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>280E63B31C8922EE006348C6</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>BranchingOut-iOS.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>280E63B41C8922EE006348C6</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>280E63B31C8922EE006348C6</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>280E63B51C8922EE006348C6</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>7FB4E2A11CAE0CF6003A94AA</string>
+				<string>7F06D87F1C925A4A00FA3E13</string>
+				<string>7F06D87A1C9258AF00FA3E13</string>
+				<string>280E63BA1C8922EE006348C6</string>
+				<string>28D813821CB6B56F00556B97</string>
+				<string>283272D11C92561100179CF9</string>
+				<string>280E63BD1C8922EE006348C6</string>
+				<string>28D813801CB6B28F00556B97</string>
+				<string>283272DC1CAC845500179CF9</string>
+				<string>283272DD1CAC845500179CF9</string>
+				<string>283272DE1CAC845500179CF9</string>
+				<string>283272DF1CAC845500179CF9</string>
+				<string>280E63BF1C8922EE006348C6</string>
+				<string>28D8138A1CB7187400556B97</string>
+				<string>28D8138B1CB7187400556B97</string>
+				<string>280E63C21C8922EE006348C6</string>
+				<string>7F06D87C1C9259F700FA3E13</string>
+				<string>650C966E1C9259DE006C952A</string>
+				<string>283272E71CAC8C1D00179CF9</string>
+				<string>28D813861CB6B87B00556B97</string>
+				<string>283272D61C9260F700179CF9</string>
+				<string>28D8137C1CB5CCAF00556B97</string>
+				<string>28D813841CB6B82E00556B97</string>
+				<string>283272E91CADCAD000179CF9</string>
+				<string>283272D31C92589400179CF9</string>
+				<string>283272DA1CAC832900179CF9</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>BranchingOut-iOS</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>280E63BA1C8922EE006348C6</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>280E63BB1C8922EE006348C6</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>280E63BB1C8922EE006348C6</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>280E63BC1C8922EE006348C6</key>
+		<dict>
+			<key>fileRef</key>
+			<string>280E63BA1C8922EE006348C6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>280E63BD1C8922EE006348C6</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Assets.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>280E63BE1C8922EE006348C6</key>
+		<dict>
+			<key>fileRef</key>
+			<string>280E63BD1C8922EE006348C6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>280E63BF1C8922EE006348C6</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>280E63C01C8922EE006348C6</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>LaunchScreen.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>280E63C01C8922EE006348C6</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/LaunchScreen.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>280E63C11C8922EE006348C6</key>
+		<dict>
+			<key>fileRef</key>
+			<string>280E63BF1C8922EE006348C6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>280E63C21C8922EE006348C6</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>280E63C31C8922EE006348C6</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>ENABLE_TESTABILITY</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.2</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>280E63C41C8922EE006348C6</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.2</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>280E63C51C8922EE006348C6</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>280E63C61C8922EE006348C6</string>
+				<string>280E63C71C8922EE006348C6</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>280E63C61C8922EE006348C6</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>71078D493F3F8685D6C5A2EA</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>BranchingOut-iOS/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>MDC.BranchingOut-iOS</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
+				<string>BranchingOut-iOS/BranchingOut-iOS-Bridging-Header.h</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>280E63C71C8922EE006348C6</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>B4E3454791EC011D38AB27BF</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>BranchingOut-iOS/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>MDC.BranchingOut-iOS</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
+				<string>BranchingOut-iOS/BranchingOut-iOS-Bridging-Header.h</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>283272D11C92561100179CF9</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>path</key>
+			<string>Gallery.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>283272D21C92561100179CF9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>283272D11C92561100179CF9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>283272D31C92589400179CF9</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>BranchingOut-iOS-Bridging-Header.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>283272D61C9260F700179CF9</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>MDCGalleryCollectionViewCell.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>283272D71C9260F700179CF9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>283272D61C9260F700179CF9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>283272DA1CAC832900179CF9</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>MDCAppDelegate.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>283272DB1CAC832900179CF9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>283272DA1CAC832900179CF9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>283272DC1CAC845500179CF9</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.jpeg</string>
+			<key>path</key>
+			<string>img1.jpg</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>283272DD1CAC845500179CF9</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.jpeg</string>
+			<key>path</key>
+			<string>img2.jpg</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>283272DE1CAC845500179CF9</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.jpeg</string>
+			<key>path</key>
+			<string>img3.jpg</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>283272DF1CAC845500179CF9</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.jpeg</string>
+			<key>path</key>
+			<string>img4.jpg</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>283272E01CAC845500179CF9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>283272DC1CAC845500179CF9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>283272E11CAC845500179CF9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>283272DD1CAC845500179CF9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>283272E21CAC845500179CF9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>283272DE1CAC845500179CF9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>283272E31CAC845500179CF9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>283272DF1CAC845500179CF9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>283272E71CAC8C1D00179CF9</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>MDCGalleryViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>283272E81CAC8C1D00179CF9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>283272E71CAC8C1D00179CF9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>283272E91CADCAD000179CF9</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>MDCPopupViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>283272EA1CADCAD000179CF9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>283272E91CADCAD000179CF9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>28D8137C1CB5CCAF00556B97</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>MDCTree.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>28D8137D1CB5CCAF00556B97</key>
+		<dict>
+			<key>fileRef</key>
+			<string>28D8137C1CB5CCAF00556B97</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>28D8137E1CB6B18B00556B97</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7F06D87F1C925A4A00FA3E13</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>28D8137F1CB6B18E00556B97</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7FB4E2A11CAE0CF6003A94AA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>28D813801CB6B28F00556B97</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.jpeg</string>
+			<key>path</key>
+			<string>Gardens_Fotor.jpg</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>28D813811CB6B28F00556B97</key>
+		<dict>
+			<key>fileRef</key>
+			<string>28D813801CB6B28F00556B97</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>28D813821CB6B56F00556B97</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>path</key>
+			<string>MapView.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>28D813831CB6B56F00556B97</key>
+		<dict>
+			<key>fileRef</key>
+			<string>28D813821CB6B56F00556B97</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>28D813841CB6B82E00556B97</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>MDCHomeViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>28D813851CB6B82E00556B97</key>
+		<dict>
+			<key>fileRef</key>
+			<string>28D813841CB6B82E00556B97</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>28D813861CB6B87B00556B97</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>MDCMapViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>28D813871CB6B87B00556B97</key>
+		<dict>
+			<key>fileRef</key>
+			<string>28D813861CB6B87B00556B97</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>28D8138A1CB7187400556B97</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>OCSingleAnnotation.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>28D8138B1CB7187400556B97</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>OCSingleAnnotation.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>28D8138C1CB7187400556B97</key>
+		<dict>
+			<key>fileRef</key>
+			<string>28D8138B1CB7187400556B97</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4D0D0F2C4ACAE82121180367</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>650C966E1C9259DE006C952A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>path</key>
+			<string>Home.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>650C966F1C9259DE006C952A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>650C966E1C9259DE006C952A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>71078D493F3F8685D6C5A2EA</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-BranchingOut-iOS.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-BranchingOut-iOS/Pods-BranchingOut-iOS.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7F06D87A1C9258AF00FA3E13</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>path</key>
+			<string>NearbyTrees.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7F06D87B1C9258AF00FA3E13</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7F06D87A1C9258AF00FA3E13</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7F06D87C1C9259F700FA3E13</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>BranchingOut-iOS-Bridging-Header.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7F06D87F1C925A4A00FA3E13</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>MDCNearbyTreesViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7FB4E2A11CAE0CF6003A94AA</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>NearbyTreesTableViewCell.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9B209DBD3CA72D36372804A8</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Embed Pods Frameworks</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-BranchingOut-iOS/Pods-BranchingOut-iOS-frameworks.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>A16E1ADA0109152A41930EDC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DAD00075B9DEE49B7DACA922</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B4E3454791EC011D38AB27BF</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-BranchingOut-iOS.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-BranchingOut-iOS/Pods-BranchingOut-iOS.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D0756E0EEDB99A68FE681413</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DAD00075B9DEE49B7DACA922</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DAD00075B9DEE49B7DACA922</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-BranchingOut-iOS.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>DF2872FFE6D3287B9D6929BC</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-BranchingOut-iOS/Pods-BranchingOut-iOS-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>280E63AB1C8922EE006348C6</string>
+</dict>
+</plist>

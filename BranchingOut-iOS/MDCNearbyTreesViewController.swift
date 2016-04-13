@@ -41,13 +41,24 @@ class MDCNearbyTreesViewController: UITableViewController{
         treeCell.textLabel?.text = tree.commonName
         
         // set the tree image
-        //let treeImage = UIImage(named: "tempPicture")
-        let treeImage = tree.image
+        let treeImage = UIImage(named: "tempPicture")
+//        let treeImage = tree.image
         treeCell.imageView?.image = treeImage
         
         // set the tree distance
         let nearbyTreeDistance = 1.5
         treeCell.detailTextLabel?.text = "\(nearbyTreeDistance) miles away"
+        
+   //     DLImageLoader.sharedInstance().imageFromUrl(tree.imageURL, imageView: treeCell.imageView)
+        
+        DLImageLoader.sharedInstance().imageFromUrl(tree.imageURL) { (error, image) -> () in
+            if (error == nil) {
+                // if we have no any errors
+                treeCell.imageView?.image = image
+            } else {
+                // if we got an error when load an image
+            }
+        }
         
 //        let treeCell: NearbyTreesTableViewCell = tableView.dequeueReusableCellWithIdentifier("MDCnearbyTreeCell")! as! NearbyTreesTableViewCell
 //        treeCell.treeImage?.text = "This tree is located on the west side of campus....."
@@ -77,17 +88,7 @@ class MDCNearbyTreesViewController: UITableViewController{
         myTree.treeID = parseObject["treeId"] as? String
         myTree.objectID = parseObject.objectId
         myTree.wikipedia = parseObject["wiki"] as? String
-        //myTree.image = UIImage(named: "img1.jpg")
-        
-        // set the picture
-        let userPicture = parseObject["photo"] as? String
-        
-        let url = NSURL(string: userPicture!)
-        let data = NSData(contentsOfURL:url!)
-        if (data != nil) {
-            myTree.image = UIImage(data:data!)
-        }
-        
+        myTree.imageURL = parseObject["photo"] as? String
         return myTree
     }
     
