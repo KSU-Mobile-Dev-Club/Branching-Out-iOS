@@ -26,7 +26,8 @@ class MDCMapViewController: UIViewController, MKMapViewDelegate, CLLocationManag
         
         self.mapView.delegate = self
         self.mapView.showsUserLocation = true
-        self.mapView.clusterSize = 0.2
+        self.mapView.clusteringEnabled = true
+        self.mapView.clusterSize = 0.02
         
     }
 
@@ -88,36 +89,6 @@ class MDCMapViewController: UIViewController, MKMapViewDelegate, CLLocationManag
             annotationView.image = UIImage(named: "tree_pin")
         } else if (annotation.isKindOfClass(OCAnnotation)){
             
-            /*
- OCAnnotation *clusterAnnotation = (OCAnnotation *)annotation;
- 
- annotationView = (MKAnnotationView *)[aMapView dequeueReusableAnnotationViewWithIdentifier:@"ClusterView"];
- if (!annotationView) {
- annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"ClusterView"];
- annotationView.canShowCallout = YES;
- annotationView.centerOffset = CGPointMake(0, -20);
- }
- 
- // set title
- clusterAnnotation.title = @"Cluster";
- clusterAnnotation.subtitle = [NSString stringWithFormat:@"Containing annotations: %zd", [clusterAnnotation.annotationsInCluster count]];
- 
- // set its image
- annotationView.image = [UIImage imageNamed:@"regular.png"];
- 
- // change pin image for group
- if (self.mapView.clusterByGroupTag) {
- if ([clusterAnnotation.groupTag isEqualToString:kTYPE1]) {
- annotationView.image = [UIImage imageNamed:@"bananas.png"];
- }
- else if([clusterAnnotation.groupTag isEqualToString:kTYPE2]){
- annotationView.image = [UIImage imageNamed:@"oranges.png"];
- }
- clusterAnnotation.title = clusterAnnotation.groupTag;
- }*/
-            
-            
-            
             let clusterAnnotation: OCAnnotation = annotation as! OCAnnotation
             annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier("ClusterView")
             if ((annotationView == nil)) {
@@ -152,7 +123,7 @@ class MDCMapViewController: UIViewController, MKMapViewDelegate, CLLocationManag
                 annotation.subtitle = scientific
             }
             
-            self.mapView.addAnnotations(annotationsToAdd.allObjects as! [MKAnnotation])
+            self.mapView.addAnnotations(annotationsToAdd.allObjects as! [OCMapViewSampleHelpAnnotation])
         }
         
     }
@@ -161,14 +132,9 @@ class MDCMapViewController: UIViewController, MKMapViewDelegate, CLLocationManag
     
     func updateOverlays() {
         self.mapView.removeOverlays(self.mapView.overlays)
-        let annotationArray : [MKAnnotation]! = self.mapView.displayedAnnotations as! [MKAnnotation]!
+        let annotationArray : [AnyObject]! = self.mapView.displayedAnnotations
         
-        for annotation: MKAnnotation in annotationArray {
-            if (annotation.isKindOfClass(MKUserLocation)){
-                //this is user location pin which is not a OCMapViewSampleHelpAnnotation
-                
-            }
-            
+        for annotation in annotationArray {
             if (annotation.isKindOfClass(OCAnnotation)) {
                 // static circle size of cluster
                 var clusterRadius: CLLocationDistance = self.mapView.region.span.longitudeDelta * self.mapView.clusterSize * 111000 / 2.0
