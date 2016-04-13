@@ -74,6 +74,8 @@ class MDCMapViewController: UIViewController, MKMapViewDelegate, CLLocationManag
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
         var annotationView: MKAnnotationView!
         
+        // If not then get a group of trees
+        
         if (annotation.isKindOfClass(OCMapViewSampleHelpAnnotation)) {
             let singleAnnotation: OCMapViewSampleHelpAnnotation = annotation as! OCMapViewSampleHelpAnnotation
             annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier("singleAnnotationView")
@@ -84,6 +86,48 @@ class MDCMapViewController: UIViewController, MKMapViewDelegate, CLLocationManag
             }
             singleAnnotation.title = singleAnnotation.groupTag
             annotationView.image = UIImage(named: "tree_pin")
+        } else if (annotation.isKindOfClass(OCAnnotation)){
+            
+            /*
+ OCAnnotation *clusterAnnotation = (OCAnnotation *)annotation;
+ 
+ annotationView = (MKAnnotationView *)[aMapView dequeueReusableAnnotationViewWithIdentifier:@"ClusterView"];
+ if (!annotationView) {
+ annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"ClusterView"];
+ annotationView.canShowCallout = YES;
+ annotationView.centerOffset = CGPointMake(0, -20);
+ }
+ 
+ // set title
+ clusterAnnotation.title = @"Cluster";
+ clusterAnnotation.subtitle = [NSString stringWithFormat:@"Containing annotations: %zd", [clusterAnnotation.annotationsInCluster count]];
+ 
+ // set its image
+ annotationView.image = [UIImage imageNamed:@"regular.png"];
+ 
+ // change pin image for group
+ if (self.mapView.clusterByGroupTag) {
+ if ([clusterAnnotation.groupTag isEqualToString:kTYPE1]) {
+ annotationView.image = [UIImage imageNamed:@"bananas.png"];
+ }
+ else if([clusterAnnotation.groupTag isEqualToString:kTYPE2]){
+ annotationView.image = [UIImage imageNamed:@"oranges.png"];
+ }
+ clusterAnnotation.title = clusterAnnotation.groupTag;
+ }*/
+            
+            
+            
+            let clusterAnnotation: OCAnnotation = annotation as! OCAnnotation
+            annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier("ClusterView")
+            if ((annotationView == nil)) {
+                annotationView = MKAnnotationView(annotation: clusterAnnotation, reuseIdentifier: "ClusterView")
+                annotationView.canShowCallout = true
+                annotationView.centerOffset = CGPointMake(0, -20)
+            }
+            clusterAnnotation.title = "Tree Groups"
+            clusterAnnotation.subtitle = "Contains \(clusterAnnotation.annotationsInCluster().count) trees"
+            annotationView.image = UIImage(named: "forest")
         }
         
         return annotationView
@@ -103,6 +147,8 @@ class MDCMapViewController: UIViewController, MKMapViewDelegate, CLLocationManag
                 let annotation: OCMapViewSampleHelpAnnotation = OCMapViewSampleHelpAnnotation(coordinate: center)
                 annotationsToAdd.addObject(annotation)
                 annotation.groupTag = treeName
+                annotation.title = treeName
+                annotation.subtitle = "some subtitle"
             }
             
             self.mapView.addAnnotations(annotationsToAdd.allObjects as! [MKAnnotation])
@@ -122,7 +168,7 @@ class MDCMapViewController: UIViewController, MKMapViewDelegate, CLLocationManag
                 
             }
             
-            if (annotation.isKindOfClass(OCMapViewSampleHelpAnnotation)) {
+            if (annotation.isKindOfClass(OCAnnotation)) {
                 // static circle size of cluster
                 var clusterRadius: CLLocationDistance = self.mapView.region.span.longitudeDelta * self.mapView.clusterSize * 111000 / 2.0
                 clusterRadius = clusterRadius * cos(annotation.coordinate.latitude * M_PI / 180.0)
