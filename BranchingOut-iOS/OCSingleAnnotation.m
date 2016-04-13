@@ -4,10 +4,12 @@
 //
 //  Created by Botond Kis on 17.07.11.
 //
+//  OCSingleAnnotation.h
+//  Modified by Kevin Manase on 4/11/16
 
-#import "OCMapViewSampleHelpAnnotation.h"
+#import "OCSingleAnnotation.h"
 
-@implementation OCMapViewSampleHelpAnnotation
+@implementation OCSingleAnnotation
 
 - (id)initWithCoordinate:(CLLocationCoordinate2D)aCoordinate
 {
@@ -20,9 +22,9 @@
 
 #pragma mark equality
 
-- (BOOL)isEqual:(OCMapViewSampleHelpAnnotation*)annotation;
+- (BOOL)isEqual:(OCSingleAnnotation*)annotation;
 {
-    if (![annotation isKindOfClass:[OCMapViewSampleHelpAnnotation class]]) {
+    if (![annotation isKindOfClass:[OCSingleAnnotation class]]) {
         return NO;
     }
     

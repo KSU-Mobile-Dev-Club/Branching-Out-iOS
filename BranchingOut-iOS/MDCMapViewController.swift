@@ -27,7 +27,7 @@ class MDCMapViewController: UIViewController, MKMapViewDelegate, CLLocationManag
         self.mapView.delegate = self
         self.mapView.showsUserLocation = true
         self.mapView.clusteringEnabled = true
-        self.mapView.clusterSize = 0.02
+        self.mapView.clusterSize = 0.07
         
     }
 
@@ -77,8 +77,8 @@ class MDCMapViewController: UIViewController, MKMapViewDelegate, CLLocationManag
         
         // If not then get a group of trees
         
-        if (annotation.isKindOfClass(OCMapViewSampleHelpAnnotation)) {
-            let singleAnnotation: OCMapViewSampleHelpAnnotation = annotation as! OCMapViewSampleHelpAnnotation
+        if (annotation.isKindOfClass(OCSingleAnnotation)) {
+            let singleAnnotation: OCSingleAnnotation = annotation as! OCSingleAnnotation
             annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier("singleAnnotationView")
             if ((annotationView == nil)) {
                 annotationView = MKAnnotationView(annotation: singleAnnotation, reuseIdentifier: "singleAnnotationView")
@@ -116,14 +116,14 @@ class MDCMapViewController: UIViewController, MKMapViewDelegate, CLLocationManag
                 let treeName = treeObject["common"] as! String
                 let scientific = treeObject["scientific"] as! String
                 let center = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
-                let annotation: OCMapViewSampleHelpAnnotation = OCMapViewSampleHelpAnnotation(coordinate: center)
+                let annotation: OCSingleAnnotation = OCSingleAnnotation(coordinate: center)
                 annotationsToAdd.addObject(annotation)
                 annotation.groupTag = treeName
                 annotation.title = treeName
                 annotation.subtitle = scientific
             }
             
-            self.mapView.addAnnotations(annotationsToAdd.allObjects as! [OCMapViewSampleHelpAnnotation])
+            self.mapView.addAnnotations(annotationsToAdd.allObjects as! [OCSingleAnnotation])
         }
         
     }

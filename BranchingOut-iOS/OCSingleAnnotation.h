@@ -4,12 +4,16 @@
 //
 //  Created by Botond Kis on 17.07.11.
 //
+//
+
+//  Modified by Kevin Manase on 4/11/16
+//
 
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
 #import "OCGrouping.h"
 
-@interface OCMapViewSampleHelpAnnotation : NSObject <MKAnnotation, OCGrouping>
+@interface OCSingleAnnotation: NSObject <MKAnnotation, OCGrouping>
 
 @property (nonatomic, assign) CLLocationCoordinate2D coordinate;
 @property (nonatomic, copy) NSString *title;
