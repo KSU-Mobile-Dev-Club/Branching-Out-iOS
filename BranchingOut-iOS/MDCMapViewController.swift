@@ -143,12 +143,13 @@ class MDCMapViewController: UIViewController, MKMapViewDelegate, CLLocationManag
                 let location: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
 
                 let treeName = treeObject["common"] as! String
+                let scientific = treeObject["scientific"] as! String
                 let center = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
                 let annotation: OCMapViewSampleHelpAnnotation = OCMapViewSampleHelpAnnotation(coordinate: center)
                 annotationsToAdd.addObject(annotation)
                 annotation.groupTag = treeName
                 annotation.title = treeName
-                annotation.subtitle = "some subtitle"
+                annotation.subtitle = scientific
             }
             
             self.mapView.addAnnotations(annotationsToAdd.allObjects as! [MKAnnotation])
