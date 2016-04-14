@@ -18,6 +18,8 @@ class MDCGalleryViewController: UIViewController, UICollectionViewDataSource, UI
     var selectedRow = 0
     var popupController:CNPPopupController = CNPPopupController()
     var treeArray: [MDCTree]! = []
+    let queryLimit = 10
+    var selectedTree: MDCTree!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,10 +27,14 @@ class MDCGalleryViewController: UIViewController, UICollectionViewDataSource, UI
         // Register cell classes
         setupCollectionView()
         
-//        // Load the images
-//        loadGallery()
-        
-        loadTreeDataForCollectionView(myCollectionView)
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(0.05 * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), {
+            self.loadTreeDataForCollectionView(self.myCollectionView)
+        })
+       
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        DLImageLoader.sharedInstance().cancelAllOperations()
     }
 
     override func didReceiveMemoryWarning() {
@@ -71,20 +77,19 @@ class MDCGalleryViewController: UIViewController, UICollectionViewDataSource, UI
         
         let cell: MDCGalleryCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! MDCGalleryCollectionViewCell
         
-        // Configure the cell
-//        cell.imageName = imageArray[indexPath.row] as! String
-//        cell.updateCell()
-//        
-        // Parse
-        cell.imageName = treeArray[indexPath.row].commonName
-        cell.parseTest()
+        let tree = treeArray[indexPath.row] 
+
+        cell.imageName = tree.commonName
+        cell.imageURL = tree.imageURL
+        cell.updateCell()
         
         return cell
     }
     
     // MARK: Collectionview delegates
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        self.showPopupWithStyle(CNPPopupStyle.Centered, indexPath: indexPath)
+        self.selectedTree = treeArray[indexPath.row]
+        self.performSegueWithIdentifier("showDetail", sender: self.selectedTree)
     }
     
     
@@ -94,60 +99,6 @@ class MDCGalleryViewController: UIViewController, UICollectionViewDataSource, UI
         myCollectionView.backgroundColor = UIColor.whiteColor()
         myCollectionView.frame.size = CGSize(width: self.view.frame.width, height: self.view.frame.height)
     }
-    
-    
-    
-    // MARK: Prep gallery
-    func loadGallery() {
-        imageArray = ["img1.jpg","img2.jpg","img3.jpg", "img4.jpg", "img2.jpg","img3.jpg", "img4.jpg", "img1.jpg"]
-                
-    }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.destinationViewController.isKindOfClass(MDCPopupViewController)) {
-            let vc = segue.destinationViewController as! MDCPopupViewController
-            let path = imageArray[selectedRow] as? String
-            vc.imagePath = path
-        }
-    }
-    
-    func showPopupWithStyle(popupStyle: CNPPopupStyle, indexPath: NSIndexPath) {
-        
-        let imagePath = imageArray[indexPath.row] as! String
-        let imageView = UIImageView.init(image: UIImage.init(named: imagePath))
-        imageView.frame = CGRectMake(0, 0, 200, 300)
-        imageView.center = self.view.center
-
-        
-        let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineBreakMode = NSLineBreakMode.ByWordWrapping
-        paragraphStyle.alignment = NSTextAlignment.Center
-        
-        let title = NSAttributedString(string: imagePath, attributes: [NSFontAttributeName: UIFont.systemFontOfSize(24), NSParagraphStyleAttributeName: paragraphStyle])
-        
-        let button = CNPPopupButton.init(frame: CGRectMake(0, 0, 200, 60))
-        button.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-        button.titleLabel?.font = UIFont.boldSystemFontOfSize(18)
-        button.setTitle("Dismiss", forState: UIControlState.Normal)
-        
-        button.backgroundColor = UIColor.init(colorLiteralRed: 0.46, green: 0.8, blue: 1.0, alpha: 1.0)
-        
-        button.layer.cornerRadius = 4;
-        button.selectionHandler = { (button) -> Void in
-            self.popupController.dismissPopupControllerAnimated(true)
-        }
-        
-        let titleLabel = UILabel()
-        titleLabel.numberOfLines = 0;
-        titleLabel.attributedText = title
-        
-
-        self.popupController = CNPPopupController(contents:[titleLabel, imageView, button])
-        self.popupController.theme = CNPPopupTheme.defaultTheme()
-        self.popupController.theme.popupStyle = popupStyle
-        self.popupController.presentPopupControllerAnimated(true)
-    }
-    
     // MARK: Load data from Parse
     func loadTreeDataForCollectionView(collectionView: UICollectionView!) {
         var trees: [MDCTree]! = []
@@ -161,6 +112,11 @@ class MDCGalleryViewController: UIViewController, UICollectionViewDataSource, UI
         }
     }
     
+    func collectionView(collectionView: UICollectionView, didEndDisplayingCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath) {
+        let tree = treeArray[indexPath.row] as MDCTree
+        DLImageLoader.sharedInstance().cancelOperation(tree.imageURL)
+    }
+    
     func makeTreeObjects(parseObject: PFObject) -> MDCTree {
         let myTree = MDCTree()
         myTree.commonName = parseObject["common"] as? String
@@ -168,11 +124,26 @@ class MDCGalleryViewController: UIViewController, UICollectionViewDataSource, UI
         myTree.treeID = parseObject["treeId"] as? String
         myTree.objectID = parseObject.objectId
         myTree.wikipedia = parseObject["wiki"] as? String
-        myTree.image = UIImage(named: "img1.jpg")
+        myTree.imageURL = parseObject["photo"] as? String
+        let tempLocation = parseObject["cord"] as? PFGeoPoint
+        let latitude: CLLocationDegrees = tempLocation!.latitude
+        let longitude: CLLocationDegrees = tempLocation!.longitude
+        let aLocation: CLLocation = CLLocation(latitude: latitude, longitude: longitude)
+        myTree.location = aLocation
         
         return myTree
     }
-
-
-
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (sender?.isKindOfClass(MDCTree) == true) {
+            let vc: MDCPopupViewController = segue.destinationViewController as! MDCPopupViewController
+            vc.treeObject = selectedTree
+        } else if (sender?.isKindOfClass(MDCPopupViewController) == true) {
+            // ASHLEY
+            let vc = segue.destinationViewController as! MDCMapViewController
+            vc.myLocation = selectedTree.location
+        }
+    }
+    
+    
 }

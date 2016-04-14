@@ -14,7 +14,7 @@ class MDCTree {
     var treeID: String?
     var commonName: String?
     var scientificName: String?
-    var location: PFGeoPoint?
+    var location: CLLocation?
     var wikipedia: String?
     var image: UIImage?
     var imageURL: String?

@@ -12,25 +12,22 @@ class MDCGalleryCollectionViewCell: UICollectionViewCell {
     var imageName: String!
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var imageLabel: UILabel!
-
+    var imageURL: String!
     
     func updateCell() {
         
-        var image = UIImage(named: imageName)
-        let imageData = UIImageJPEGRepresentation(image!, 0.1)
-        image = UIImage(data: imageData!)
         imageLabel.text = imageName
         
         imageView.contentMode = UIViewContentMode.ScaleAspectFill
-        imageView.image = image
         imageView.clipsToBounds = true
+        DLImageLoader.sharedInstance().imageFromUrl(imageURL) { (error, image) -> () in
+            if (error == nil) {
+                // if we have no any errors
+                self.imageView?.image = image
+            } else {
+                // if we got an error when load an image
+            }
+        }
     }
     
-    func parseTest() {
-        imageLabel.text = imageName
-        let image = UIImage(named: "img1.jpg")
-        imageView.contentMode = UIViewContentMode.ScaleAspectFill
-        imageView.image = image
-        imageView.clipsToBounds = true
-    }
 }

@@ -15,6 +15,9 @@ class MDCMapViewController: UIViewController, MKMapViewDelegate, CLLocationManag
     @IBOutlet var mapView: OCMapView!
     let locationManager = CLLocationManager()
     var treeLocations: [PFObject]! = []
+    var myLocation: CLLocation!
+    
+    var location: CLLocation!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,12 +25,15 @@ class MDCMapViewController: UIViewController, MKMapViewDelegate, CLLocationManag
         self.locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
         self.locationManager.requestWhenInUseAuthorization()
+        
         self.locationManager.startUpdatingLocation()
         
         self.mapView.delegate = self
         self.mapView.showsUserLocation = true
         self.mapView.clusteringEnabled = true
         self.mapView.clusterSize = 0.07
+        
+        myLocation = location
         
     }
 
@@ -36,10 +42,10 @@ class MDCMapViewController: UIViewController, MKMapViewDelegate, CLLocationManag
         // Dispose of any resources that can be recreated.
     }
     
-    // MAR: - Location delefate methods
+    // MAR: - Location delegate methods
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let location = locations.last
+        let location = myLocation != nil ? myLocation : locations.last
         let center = CLLocationCoordinate2D(latitude: (location?.coordinate.latitude)!, longitude: (location?.coordinate.longitude)!)
         let region = MKCoordinateRegion(center: center, span: MKCoordinateSpanMake(0.07, 0.07)) // the smaller the bigger zoom
         self.mapView.setRegion(region, animated: true)
