@@ -11,6 +11,7 @@ import UIKit
 class MDCTree {
 
     var objectID: String?
+    var distance: Double?
     var treeID: String?
     var commonName: String?
     var scientificName: String?

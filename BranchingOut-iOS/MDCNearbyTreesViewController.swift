@@ -65,7 +65,7 @@ class MDCNearbyTreesViewController: UITableViewController{
         
         
         // set the tree distance
-        let nearbyTreeDistance = 1.5
+        let nearbyTreeDistance = tree.distance!
         treeCell.detailTextLabel?.text = "\(nearbyTreeDistance) miles away"
         
    //     DLImageLoader.sharedInstance().imageFromUrl(tree.imageURL, imageView: treeCell.imageView)
@@ -97,7 +97,7 @@ class MDCNearbyTreesViewController: UITableViewController{
             query.orderByAscending("cord")
             query.findObjectsInBackgroundWithBlock { (object: [PFObject]?, error: NSError?) -> Void in
                 for item: PFObject in object! {
-                    trees?.append(self.makeTreeObjects(item))
+                    trees?.append(self.makeTreeObjects(item, location: location!))
                 }
                 self.treeArray = trees
                 atableView.reloadData()
@@ -107,14 +107,20 @@ class MDCNearbyTreesViewController: UITableViewController{
 
     }
     
-    func makeTreeObjects(parseObject: PFObject) -> MDCTree {
+    func makeTreeObjects(parseObject: PFObject, location: PFGeoPoint) -> MDCTree {
         let myTree = MDCTree()
-        myTree.commonName = parseObject["common"] as? String
-        myTree.scientificName = parseObject["scientific"] as? String
-        myTree.treeID = parseObject["treeId"] as? String
-        myTree.objectID = parseObject.objectId
-        myTree.wikipedia = parseObject["wiki"] as? String
-        myTree.imageURL = parseObject["photo"] as? String
+        
+       
+            myTree.distance = parseObject["cord"].distanceInMilesTo(location)
+            myTree.commonName = parseObject["common"] as? String
+            myTree.scientificName = parseObject["scientific"] as? String
+            myTree.treeID = parseObject["treeId"] as? String
+            myTree.objectID = parseObject.objectId
+            myTree.wikipedia = parseObject["wiki"] as? String
+            myTree.imageURL = parseObject["photo"] as? String
+        
+        
+        
         return myTree
     }
     
