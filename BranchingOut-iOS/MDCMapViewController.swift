@@ -46,7 +46,7 @@ class MDCMapViewController: UIViewController, MKMapViewDelegate, CLLocationManag
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = myLocation != nil ? myLocation : locations.last
         let center = CLLocationCoordinate2D(latitude: (location?.coordinate.latitude)!, longitude: (location?.coordinate.longitude)!)
-        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpanMake(0.07, 0.07)) // the smaller the bigger zoom
+        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpanMake(0.04, 0.04)) // the smaller the bigger zoom
         self.mapView.setRegion(region, animated: true)
         self.locationManager.stopUpdatingLocation()
         self.addTreesNearby(location!)
