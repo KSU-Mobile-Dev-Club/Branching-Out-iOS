@@ -23,15 +23,14 @@ class MDCMapViewController: UIViewController, MKMapViewDelegate, CLLocationManag
         super.viewDidLoad()
         
         self.locationManager.delegate = self
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
         self.locationManager.requestWhenInUseAuthorization()
         
         self.locationManager.startUpdatingLocation()
         
         self.mapView.delegate = self
         self.mapView.showsUserLocation = true
-        self.mapView.clusteringEnabled = true
-        self.mapView.clusterSize = 0.07
+        self.mapView.clusteringEnabled = false
         
         myLocation = location
         
@@ -67,15 +66,6 @@ class MDCMapViewController: UIViewController, MKMapViewDelegate, CLLocationManag
                 }
             completion(locations: objectLocations)
         }
-    }
-    
-    func mapView(mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
-        self.mapView.doClustering()
-        self.updateOverlays()
-    }
-    
-    func mapView(mapView: MKMapView, didAddAnnotationViews views: [MKAnnotationView]) {
-        self.updateOverlays()
     }
     
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
@@ -133,38 +123,5 @@ class MDCMapViewController: UIViewController, MKMapViewDelegate, CLLocationManag
         }
         
     }
-    
-    // I get errors here
-    
-    func updateOverlays() {
-        self.mapView.removeOverlays(self.mapView.overlays)
-        let annotationArray : [AnyObject]! = self.mapView.displayedAnnotations
-        
-        for annotation in annotationArray {
-            if (annotation.isKindOfClass(OCAnnotation)) {
-                // static circle size of cluster
-                var clusterRadius: CLLocationDistance = self.mapView.region.span.longitudeDelta * self.mapView.clusterSize * 111000 / 2.0
-                clusterRadius = clusterRadius * cos(annotation.coordinate.latitude * M_PI / 180.0)
-                
-                let circle: MKCircle = MKCircle(centerCoordinate: annotation.coordinate, radius: clusterRadius)
-                circle.title = "background"
-                self.mapView.addOverlay(circle)
-                
-                let circleLine: MKCircle = MKCircle(centerCoordinate: annotation.coordinate, radius: clusterRadius)
-                circleLine.title = "line"
-                self.mapView.addOverlay(circleLine)
-            }
-        }
-    }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
