@@ -30,6 +30,7 @@
 		28D8138C1CB7187400556B97 /* OCSingleAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D8138B1CB7187400556B97 /* OCSingleAnnotation.m */; };
 		650C966F1C9259DE006C952A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 650C966E1C9259DE006C952A /* Home.storyboard */; };
 		7F06D87B1C9258AF00FA3E13 /* NearbyTrees.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F06D87A1C9258AF00FA3E13 /* NearbyTrees.storyboard */; };
+		7FAE908D1CC07C02000A4913 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FAE908C1CC07C02000A4913 /* CoreLocation.framework */; };
 		A16E1ADA0109152A41930EDC /* libPods-BranchingOut-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAD00075B9DEE49B7DACA922 /* libPods-BranchingOut-iOS.a */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		7F06D87A1C9258AF00FA3E13 /* NearbyTrees.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NearbyTrees.storyboard; sourceTree = "<group>"; };
 		7F06D87C1C9259F700FA3E13 /* BranchingOut-iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BranchingOut-iOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		7F06D87F1C925A4A00FA3E13 /* MDCNearbyTreesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDCNearbyTreesViewController.swift; sourceTree = "<group>"; };
+		7FAE908C1CC07C02000A4913 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		7FB4E2A11CAE0CF6003A94AA /* NearbyTreesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyTreesTableViewCell.swift; sourceTree = "<group>"; };
 		B4E3454791EC011D38AB27BF /* Pods-BranchingOut-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BranchingOut-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-BranchingOut-iOS/Pods-BranchingOut-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		DAD00075B9DEE49B7DACA922 /* libPods-BranchingOut-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BranchingOut-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FAE908D1CC07C02000A4913 /* CoreLocation.framework in Frameworks */,
 				A16E1ADA0109152A41930EDC /* libPods-BranchingOut-iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,6 +146,7 @@
 		D0756E0EEDB99A68FE681413 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7FAE908C1CC07C02000A4913 /* CoreLocation.framework */,
 				DAD00075B9DEE49B7DACA922 /* libPods-BranchingOut-iOS.a */,
 			);
 			name = Frameworks;

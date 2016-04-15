@@ -13,11 +13,12 @@ class MDCNearbyTreesViewController: UITableViewController{
     
     var treeArray: [MDCTree]!  = []
     var selectedTree: MDCTree!
+    var currentLocation: PFGeoPoint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loadTreeDataForTableView(self.tableView)
-       
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -60,6 +61,8 @@ class MDCNearbyTreesViewController: UITableViewController{
         let treeImage = UIImage(named: "tempPicture")
 //        let treeImage = tree.image
         treeCell.imageView?.image = treeImage
+        treeCell.imageView?.contentMode = .ScaleAspectFill
+        
         
         // set the tree distance
         let nearbyTreeDistance = 1.5
@@ -88,6 +91,13 @@ class MDCNearbyTreesViewController: UITableViewController{
     func loadTreeDataForTableView(atableView: UITableView!) {
         var trees: [MDCTree]! = []
         let query  = PFQuery(className: "trees")
+        var myLocation: PFGeoPoint?
+        PFGeoPoint.geoPointForCurrentLocationInBackground { (location: PFGeoPoint?, erro: NSError?) in
+            myLocation = location
+        }
+        
+        query.whereKey("cord", nearGeoPoint: myLocation!, withinMiles: 2)
+        query.orderByAscending("cord")
         query.findObjectsInBackgroundWithBlock { (object: [PFObject]?, error: NSError?) -> Void in
             for item: PFObject in object! {
                 trees?.append(self.makeTreeObjects(item))
