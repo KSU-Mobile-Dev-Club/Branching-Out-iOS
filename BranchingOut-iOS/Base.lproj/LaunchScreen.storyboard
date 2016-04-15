@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,7 +17,34 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gardens_Fotor.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="99m-RG-yqi">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S9c-y7-ceV">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Branching Out" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="kgv-pO-6GG">
+                                <rect key="frame" x="161.5" y="288" width="276" height="48"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="99m-RG-yqi" secondAttribute="trailing" constant="-20" id="1uk-NJ-9nU"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="S9c-y7-ceV" secondAttribute="bottom" id="4SP-1j-Mie"/>
+                            <constraint firstItem="S9c-y7-ceV" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-20" id="MoB-Pu-TzU"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="99m-RG-yqi" secondAttribute="bottom" id="Yn8-Fv-Flb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="S9c-y7-ceV" secondAttribute="trailing" constant="-20" id="cch-uQ-ZYC"/>
+                            <constraint firstItem="99m-RG-yqi" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-20" id="flC-hp-jS4"/>
+                            <constraint firstItem="S9c-y7-ceV" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="-20" id="gDC-4W-LYh"/>
+                            <constraint firstItem="kgv-pO-6GG" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="12" id="isQ-7J-tSf"/>
+                            <constraint firstItem="kgv-pO-6GG" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="q0J-7k-hwU"/>
+                            <constraint firstItem="99m-RG-yqi" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="-20" id="yJ4-O3-FNe"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +52,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Gardens_Fotor.jpg" width="999" height="562"/>
+    </resources>
 </document>
