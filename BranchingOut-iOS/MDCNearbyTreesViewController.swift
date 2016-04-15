@@ -66,7 +66,8 @@ class MDCNearbyTreesViewController: UITableViewController{
         
         // set the tree distance
         let nearbyTreeDistance = tree.distance!
-        treeCell.detailTextLabel?.text = "\(nearbyTreeDistance) miles away"
+        let str = NSString(format: "%.1f", nearbyTreeDistance)
+        treeCell.detailTextLabel?.text = (str as String) + " miles away"
         
    //     DLImageLoader.sharedInstance().imageFromUrl(tree.imageURL, imageView: treeCell.imageView)
         
