@@ -12,6 +12,7 @@ import UIKit
 class MDCNearbyTreesViewController: UITableViewController{
     
     var treeArray: [MDCTree]!  = []
+    var selectedTree: MDCTree!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +28,22 @@ class MDCNearbyTreesViewController: UITableViewController{
     
     // Finish when parse server is available
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        // TODO: add link to a TreeDetailViewController
+        
+        self.selectedTree = treeArray[indexPath.row]
+        self.performSegueWithIdentifier("showDetail", sender: self.selectedTree)
+        
+    }
+    
+    // provide info necessary for segue to MDCPopupViewController
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (sender?.isKindOfClass(MDCTree) == true) {
+            let vc: MDCPopupViewController = segue.destinationViewController as! MDCPopupViewController
+            vc.treeObject = selectedTree
+        } else if (sender?.isKindOfClass(MDCPopupViewController) == true) {
+            // ASHLEY
+            let vc = segue.destinationViewController as! MDCMapViewController
+            vc.myLocation = selectedTree.location
+        }
     }
     
     // Creates each cell for the TreesTableView
