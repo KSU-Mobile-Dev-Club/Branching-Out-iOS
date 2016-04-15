@@ -91,20 +91,20 @@ class MDCNearbyTreesViewController: UITableViewController{
     func loadTreeDataForTableView(atableView: UITableView!) {
         var trees: [MDCTree]! = []
         let query  = PFQuery(className: "trees")
-        var myLocation: PFGeoPoint?
+        
         PFGeoPoint.geoPointForCurrentLocationInBackground { (location: PFGeoPoint?, erro: NSError?) in
-            myLocation = location
+            query.whereKey("cord", nearGeoPoint: location!, withinMiles: 2)
+            query.orderByAscending("cord")
+            query.findObjectsInBackgroundWithBlock { (object: [PFObject]?, error: NSError?) -> Void in
+                for item: PFObject in object! {
+                    trees?.append(self.makeTreeObjects(item))
+                }
+                self.treeArray = trees
+                atableView.reloadData()
+            }
         }
         
-        query.whereKey("cord", nearGeoPoint: myLocation!, withinMiles: 2)
-        query.orderByAscending("cord")
-        query.findObjectsInBackgroundWithBlock { (object: [PFObject]?, error: NSError?) -> Void in
-            for item: PFObject in object! {
-                trees?.append(self.makeTreeObjects(item))
-            }
-            self.treeArray = trees
-            atableView.reloadData()
-        }
+
     }
     
     func makeTreeObjects(parseObject: PFObject) -> MDCTree {
